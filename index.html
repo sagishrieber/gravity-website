@@ -314,6 +314,32 @@
     .fbot{display:flex;justify-content:space-between;align-items:center;
       padding-top:28px;border-top:1px solid var(--border);flex-wrap:wrap;gap:10px}
     .fcopy{font-size:11.5px;color:var(--t3)}
+    .fcopy-link{color:inherit;text-decoration:none;transition:color .25s}
+    .fcopy-link:hover{color:var(--acc)}
+
+    /* ── NEWSLETTER BAR ── */
+    .nl-bar{padding:72px 24px;background:var(--bg2);border-top:1px solid var(--border)}
+    .nl-bar-in{max-width:640px;margin:0 auto;text-align:center}
+    .nl-bar .lbl{margin-bottom:14px}
+    .nl-bar h2{font-family:'Playfair Display',serif;font-size:36px;font-weight:500;line-height:1.2;margin-bottom:12px}
+    .nl-bar h2 em{font-style:italic;color:var(--acc)}
+    .nl-bar p{font-size:15px;color:var(--t3);line-height:1.7;margin-bottom:32px}
+    .nl-form{display:flex;gap:10px;max-width:480px;margin:0 auto}
+    .nl-input{flex:1;padding:13px 18px;border-radius:100px;border:1px solid var(--border);
+      background:var(--card);color:var(--t1);font-family:'Urbanist',sans-serif;font-size:14px;
+      outline:none;transition:border-color .25s,box-shadow .25s}
+    .nl-input::placeholder{color:var(--t3)}
+    .nl-input:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--glow)}
+    .nl-submit{padding:13px 24px;border-radius:100px;background:var(--acc);color:var(--btn-t);
+      font-family:'Urbanist',sans-serif;font-size:14px;font-weight:600;border:none;
+      cursor:pointer;transition:all .25s;white-space:nowrap;flex-shrink:0}
+    .nl-submit:hover{background:var(--acc3,var(--acc));transform:translateY(-1px)}
+    .nl-note{font-size:11.5px;color:var(--t3);margin-top:14px}
+    .nl-success{display:none;font-size:15px;color:var(--acc);font-weight:600;margin-top:12px}
+    @media(max-width:520px){
+      .nl-form{flex-direction:column}
+      .nl-bar h2{font-size:28px}
+    }
     .fsoc{display:flex;gap:7px}
     .fsoc a{width:30px;height:30px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);
       display:flex;align-items:center;justify-content:center;transition:all .25s}
@@ -789,6 +815,21 @@
   </div>
 </section>
 
+<!-- NEWSLETTER BAR -->
+<section class="nl-bar">
+  <div class="nl-bar-in">
+    <p class="lbl">The Weekly Playbook</p>
+    <h2>Insights for founders who want to be <em>impossible to ignore</em></h2>
+    <p>One short email per week — frameworks, case studies, and moves from the top 1% of founder-led brands.</p>
+    <form class="nl-form" id="nl-form" onsubmit="nlSubmit(event)">
+      <input class="nl-input" type="email" id="nl-email" placeholder="your@email.com" required aria-label="Email address">
+      <button class="nl-submit" type="submit">Subscribe</button>
+    </form>
+    <p class="nl-success" id="nl-success">You're in. Check your inbox for a confirmation.</p>
+    <p class="nl-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-in">
@@ -820,7 +861,7 @@
       </div>
     </div>
     <div class="fbot">
-      <p class="fcopy">&copy; 2025 Gravity &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Terms</p>
+      <p class="fcopy">&copy; 2025 Gravity &nbsp;·&nbsp; <a href="privacy.html" class="fcopy-link">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" class="fcopy-link">Terms</a></p>
       <div class="fsoc">
         <a href="https://www.linkedin.com/company/gravity-brand/" target="_blank" rel="noopener" aria-label="Gravity on LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -858,6 +899,15 @@
     entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});
   },{threshold:0.08});
   document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+  function nlSubmit(e) {
+    e.preventDefault();
+    const email = document.getElementById('nl-email').value;
+    document.getElementById('nl-form').style.display = 'none';
+    document.getElementById('nl-success').style.display = 'block';
+    // TODO: hook up to your email service (e.g., Mailchimp, ConvertKit, Beehiiv)
+    console.log('Newsletter signup:', email);
+  }
 </script>
 <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 </body>

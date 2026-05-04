@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Gravity</title>
+  <meta name="description" content="Gravity terms of service — the rules governing your use of the Gravity platform and services under Israeli law.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
+  <style>
+    :root {
+      --bg:#F5F0ED;--bg2:#EDE6E1;--card:#FFFFFF;--border:#D8CFC9;
+      --t1:#1a1410;--t2:rgba(26,20,16,.72);--t3:rgba(26,20,16,.68);
+      --acc:#7A5C4A;--hdr:rgba(245,240,237,.9);--glow:rgba(122,92,74,.1);
+      --shadow:0 1px 3px rgba(26,20,16,.05),0 4px 20px rgba(26,20,16,.04);
+      --btn-t:#FAF7F5;
+    }
+    :root.dark {
+      --bg:#0C0B0A;--bg2:#141210;--card:#1A1714;--border:#2C2520;
+      --t1:#F5F0ED;--t2:rgba(245,240,237,.72);--t3:rgba(245,240,237,.60);
+      --acc:#C9A898;--hdr:rgba(12,11,10,.9);--glow:rgba(201,168,152,.09);
+      --shadow:none;--btn-t:#0C0B0A;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Urbanist',sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;transition:background .35s,color .35s}
+    a{color:var(--acc);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* HEADER */
+    .hdr{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:1000;
+      width:calc(100% - 40px);max-width:1160px;height:62px;
+      display:flex;align-items:center;justify-content:space-between;padding:0 24px;
+      background:var(--hdr);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+      border:1px solid var(--border);border-radius:18px;transition:background .35s,border-color .35s}
+    .hdr-logo img{height:26px}
+    .logo-d{display:block}.logo-l{display:none}
+    :root.dark .logo-d{display:none}:root.dark .logo-l{display:block}
+    .hdr-right{display:flex;align-items:center;gap:8px}
+    .ico-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);
+      display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0}
+    .ico-btn:hover{border-color:var(--acc);background:var(--glow)}
+    .ico-btn svg{width:16px;height:16px}
+    .btn-back{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:100px;
+      font-size:13px;font-weight:600;border:1px solid var(--border);color:var(--t2);
+      background:transparent;cursor:pointer;transition:all .22s;text-decoration:none}
+    .btn-back:hover{border-color:var(--acc);color:var(--acc);background:var(--glow);text-decoration:none}
+
+    /* LAYOUT */
+    .page{max-width:760px;margin:0 auto;padding:120px 24px 80px}
+
+    /* HERO */
+    .page-hero{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+    .page-lbl{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+      color:var(--acc);margin-bottom:14px}
+    .page-title{font-family:'Playfair Display',serif;font-size:46px;font-weight:500;line-height:1.15;margin-bottom:16px}
+    .page-meta{font-size:13.5px;color:var(--t3);display:flex;gap:24px;flex-wrap:wrap}
+    .page-meta span{display:flex;align-items:center;gap:6px}
+    .page-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+
+    /* TOC */
+    .toc{background:var(--card);border:1px solid var(--border);border-radius:16px;
+      padding:24px 28px;margin-bottom:48px;box-shadow:var(--shadow)}
+    .toc h4{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+      color:var(--t3);margin-bottom:14px}
+    .toc ol{padding-left:18px;display:flex;flex-direction:column;gap:6px}
+    .toc li a{font-size:13.5px;color:var(--t2);transition:color .2s;text-decoration:none}
+    .toc li a:hover{color:var(--acc)}
+
+    /* CONTENT */
+    .section{margin-bottom:48px}
+    .section h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;
+      color:var(--t1);margin-bottom:16px;padding-top:8px}
+    .section h3{font-size:15px;font-weight:700;color:var(--t1);margin:20px 0 8px}
+    .section p{font-size:15px;color:var(--t2);line-height:1.75;margin-bottom:12px}
+    .section p:last-child{margin-bottom:0}
+    .section ul,.section ol{padding-left:20px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .section li{font-size:15px;color:var(--t2);line-height:1.65}
+    .section li strong{color:var(--t1)}
+
+    /* NOTICE BOX */
+    .notice{background:var(--glow);border:1px solid var(--border);border-left:3px solid var(--acc);
+      border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:20px}
+    .notice p{font-size:13.5px;color:var(--t2);margin:0;line-height:1.65}
+    .notice strong{color:var(--t1)}
+
+    /* FOOTER */
+    .footer{padding:36px 24px 24px;border-top:1px solid var(--border);margin-top:40px}
+    .footer-in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:16px}
+    .flogo img{height:22px}
+    .flinks{display:flex;gap:20px;flex-wrap:wrap}
+    .flinks a{font-size:13px;color:var(--t3);transition:color .25s;text-decoration:none}
+    .flinks a:hover{color:var(--acc)}
+    .fcopy{font-size:12px;color:var(--t3);text-align:right}
+
+    @media(max-width:768px){
+      .hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}
+      .page{padding:100px 20px 60px}
+      .page-title{font-size:34px}
+      .footer-in{flex-direction:column;align-items:flex-start}
+      .fcopy{text-align:left}
+    }
+  </style>
+</head>
+<body>
+
+<header class="hdr">
+  <a href="index.html" class="hdr-logo">
+    <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+    <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+  </a>
+  <div class="hdr-right">
+    <button class="ico-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg id="isun" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4" fill="var(--acc)" stroke="none"/>
+        <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      </svg>
+      <svg id="imoon" viewBox="0 0 24 24" style="display:none">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/>
+      </svg>
+    </button>
+    <a href="index.html" class="btn-back">&#8592; Back to site</a>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="page-hero">
+    <p class="page-lbl">Legal</p>
+    <h1 class="page-title">Terms of Service</h1>
+    <div class="page-meta">
+      <span>Effective: May 1, 2025</span>
+      <span>Last updated: May 4, 2026</span>
+      <span>Governed by Israeli law</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <p><strong>Please read carefully.</strong> By accessing or using any Gravity service, you agree to be bound by these Terms of Service. If you do not agree, do not use the services.</p>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#s1">Acceptance of Terms</a></li>
+      <li><a href="#s2">Definitions</a></li>
+      <li><a href="#s3">Description of Services</a></li>
+      <li><a href="#s4">Eligibility</a></li>
+      <li><a href="#s5">Account Registration and Security</a></li>
+      <li><a href="#s6">Subscription Plans and Payment</a></li>
+      <li><a href="#s7">Acceptable Use</a></li>
+      <li><a href="#s8">Intellectual Property</a></li>
+      <li><a href="#s9">User Content</a></li>
+      <li><a href="#s10">Third-Party Services and Integrations</a></li>
+      <li><a href="#s11">Disclaimer of Warranties</a></li>
+      <li><a href="#s12">Limitation of Liability</a></li>
+      <li><a href="#s13">Indemnification</a></li>
+      <li><a href="#s14">Termination</a></li>
+      <li><a href="#s15">Governing Law and Jurisdiction</a></li>
+      <li><a href="#s16">Changes to These Terms</a></li>
+      <li><a href="#s17">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <div class="section" id="s1">
+    <h2>1. Acceptance of Terms</h2>
+    <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and Gravity ("Company," "we," "us," or "our"), governing your access to and use of the Gravity platform, website at growgravity.com, and all related services (collectively, the "Services").</p>
+    <p>By creating an account, clicking "I agree," or otherwise using the Services, you confirm that you have read, understood, and agree to these Terms in full. If you are using the Services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.</p>
+    <p>If you do not agree to these Terms, you must immediately stop using the Services.</p>
+  </div>
+
+  <div class="section" id="s2">
+    <h2>2. Definitions</h2>
+    <ul>
+      <li><strong>"Services"</strong> means all products, features, tools, and content provided by Gravity, including the SaaS platform, the VIP done-for-you service, and this website.</li>
+      <li><strong>"Account"</strong> means the user profile and credentials you create to access the Services.</li>
+      <li><strong>"Subscription"</strong> means a paid plan that grants access to specific features and capabilities of the SaaS platform.</li>
+      <li><strong>"User Content"</strong> means any text, data, images, or other materials you upload, submit, or create through the Services.</li>
+      <li><strong>"Seat"</strong> means a single named user license within an Agency subscription plan.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s3">
+    <h2>3. Description of Services</h2>
+    <p>Gravity provides a founder-led growth platform and associated professional services designed to help founders and their teams build an authoritative public presence. The Services currently include:</p>
+    <h3>SaaS Platform</h3>
+    <ul>
+      <li>Posting Knowledge Hub and content planning tools</li>
+      <li>WhatsApp AI assistant for content creation</li>
+      <li>LinkedIn Extension for engagement and prospecting</li>
+      <li>Video Chopper for repurposing long-form content</li>
+      <li>Trend Watcher for real-time topic discovery</li>
+      <li>AI Image Creation for branded visuals</li>
+      <li>Feed &amp; Network Builder for audience growth</li>
+      <li>Company-level Research Tool (Agency plan only)</li>
+    </ul>
+    <h3>VIP Done-for-You Service</h3>
+    <p>A bespoke, application-only managed service that includes strategic framework development, deep content asset creation, networking operations, and placement on podcasts, stages, and advisory boards. Specific deliverables and terms for VIP engagements are governed by a separate service agreement.</p>
+    <p>We reserve the right to modify, suspend, or discontinue any feature or aspect of the Services at any time with reasonable notice where practicable.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <h2>4. Eligibility</h2>
+    <p>You must be at least 18 years of age to use the Services. By using the Services, you represent and warrant that you meet this age requirement.</p>
+    <p>The Services are intended for business and professional use. By registering, you confirm that you are acting in a professional or commercial capacity and not as a consumer for personal, household, or family purposes.</p>
+    <p>Use of the Services is void where prohibited by applicable law. We make no representation that the Services are appropriate or available in all jurisdictions.</p>
+  </div>
+
+  <div class="section" id="s5">
+    <h2>5. Account Registration and Security</h2>
+    <p>To access most features of the Services, you must register for an Account. You agree to:</p>
+    <ul>
+      <li>Provide accurate, current, and complete information during registration</li>
+      <li>Maintain and promptly update your account information</li>
+      <li>Keep your password confidential and not share it with any third party</li>
+      <li>Notify us immediately at <a href="mailto:legal@growgravity.com">legal@growgravity.com</a> of any unauthorized use of your account</li>
+      <li>Accept responsibility for all activities that occur under your account</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate accounts that contain false or misleading information, or that we reasonably suspect have been compromised.</p>
+    <p>Each Seat on an Agency plan must be assigned to a named individual. Sharing a single Seat among multiple users is prohibited.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <h2>6. Subscription Plans and Payment</h2>
+    <h3>Plans and Fees</h3>
+    <p>Gravity offers the following SaaS subscription plans (prices subject to change with notice):</p>
+    <ul>
+      <li><strong>Agency Plan:</strong> $79 USD per seat per month, with a minimum of 2 seats.</li>
+      <li><strong>Solo Plan:</strong> $89 USD per month for a single user.</li>
+    </ul>
+    <p>VIP done-for-you services are priced separately and governed by a bespoke service agreement. Contact us for details.</p>
+    <h3>Billing</h3>
+    <p>Subscriptions are billed on a recurring monthly basis starting from the date of activation. By providing payment information, you authorize us (or our payment processor) to charge the applicable fees automatically at each renewal period.</p>
+    <h3>Cancellation</h3>
+    <p>You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing period. You will retain access to the Services until that date. We do not provide prorated refunds for partial months.</p>
+    <h3>Refunds</h3>
+    <p>All fees are non-refundable except as required by applicable Israeli law or as expressly stated in a separate written agreement. If you believe a charge was made in error, contact us within 30 days of the charge at <a href="mailto:billing@growgravity.com">billing@growgravity.com</a>.</p>
+    <h3>Price Changes</h3>
+    <p>We may change subscription fees at any time. We will provide at least 30 days' notice before any price increase takes effect for existing subscribers. Continued use of the Services after the effective date constitutes acceptance of the new pricing.</p>
+    <h3>Taxes</h3>
+    <p>All fees are exclusive of taxes, levies, or duties imposed by applicable law. You are responsible for paying any such taxes. Where required by Israeli law, VAT will be added to your invoice.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <h2>7. Acceptable Use</h2>
+    <p>You agree to use the Services only for lawful purposes and in accordance with these Terms. You must not:</p>
+    <ul>
+      <li>Violate any applicable Israeli or international law or regulation</li>
+      <li>Use the Services to generate, distribute, or promote spam, misinformation, or harmful content</li>
+      <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity</li>
+      <li>Reverse engineer, decompile, or attempt to extract the source code of the platform</li>
+      <li>Use automated scraping, bots, or crawlers to extract data from the Services without our express written permission</li>
+      <li>Attempt to gain unauthorized access to any portion of the Services or its related systems</li>
+      <li>Interfere with or disrupt the integrity or performance of the Services</li>
+      <li>Use the Services to harass, abuse, or harm another person</li>
+      <li>Resell or sublicense access to the Services without our prior written consent</li>
+      <li>Use the Services in any manner that could bring the Company into disrepute</li>
+    </ul>
+    <p>We reserve the right to investigate potential violations and, at our sole discretion, suspend or terminate access to the Services for any user found to be in violation of this section.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <h2>8. Intellectual Property</h2>
+    <h3>Our Intellectual Property</h3>
+    <p>The Services, including all software, designs, text, graphics, logos, and other content created by Gravity, are owned by or licensed to us and are protected by Israeli intellectual property laws, including the Copyright Law, 5768-2007, and the Patents Law, 5727-1967.</p>
+    <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the Services solely for your internal business purposes during the term of your subscription, subject to these Terms.</p>
+    <p>You may not copy, reproduce, modify, distribute, sell, or create derivative works based on our intellectual property without our express prior written consent.</p>
+    <h3>Feedback</h3>
+    <p>If you submit suggestions, ideas, or other feedback regarding the Services ("Feedback"), you grant us a perpetual, irrevocable, royalty-free license to use, reproduce, modify, and incorporate such Feedback into the Services without any obligation to you.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <h2>9. User Content</h2>
+    <p>You retain ownership of all User Content you submit through the Services. By submitting User Content, you grant Gravity a non-exclusive, worldwide, royalty-free license to use, store, process, and display your User Content solely for the purpose of providing and improving the Services.</p>
+    <p>You represent and warrant that:</p>
+    <ul>
+      <li>You own or have the necessary rights to submit the User Content</li>
+      <li>Your User Content does not infringe the intellectual property rights, privacy rights, or any other rights of any third party</li>
+      <li>Your User Content complies with these Terms and all applicable laws</li>
+    </ul>
+    <p>We do not endorse or assume responsibility for any User Content. We reserve the right to remove User Content that violates these Terms or that we determine, in our sole discretion, to be harmful, offensive, or otherwise objectionable.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <h2>10. Third-Party Services and Integrations</h2>
+    <p>The Services may integrate with or link to third-party platforms, including LinkedIn, WhatsApp, and other social media or productivity tools ("Third-Party Services"). Your use of Third-Party Services is governed by those services' own terms and privacy policies.</p>
+    <p>We are not responsible for the availability, accuracy, or legality of any Third-Party Services. Any issues arising from Third-Party Services must be addressed directly with those providers.</p>
+    <p>We may discontinue integrations with Third-Party Services at any time without liability to you.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <h2>11. Disclaimer of Warranties</h2>
+    <div class="notice">
+      <p><strong>Important:</strong> The Services are provided "as is" and "as available" without warranties of any kind, express or implied, to the fullest extent permitted by Israeli law.</p>
+    </div>
+    <p>We do not warrant that:</p>
+    <ul>
+      <li>The Services will be uninterrupted, error-free, or secure</li>
+      <li>Any results obtained from the use of the Services will be accurate, complete, or reliable</li>
+      <li>The Services will meet your specific business requirements</li>
+      <li>Any defects or errors will be corrected</li>
+    </ul>
+    <p>We expressly disclaim all implied warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+    <p>No advice or information, whether oral or written, obtained by you from us or through the Services, will create any warranty not expressly stated in these Terms.</p>
+  </div>
+
+  <div class="section" id="s12">
+    <h2>12. Limitation of Liability</h2>
+    <div class="notice">
+      <p><strong>To the maximum extent permitted by Israeli law,</strong> Gravity, its directors, employees, agents, and service providers shall not be liable for any indirect, incidental, special, consequential, punitive, or exemplary damages arising out of or related to these Terms or the Services.</p>
+    </div>
+    <p>Our total aggregate liability to you for any claims arising out of or related to these Terms or the Services shall not exceed the total amount paid by you to us in the twelve (12) months immediately preceding the event giving rise to the claim.</p>
+    <p>Some jurisdictions do not allow the exclusion or limitation of certain damages. In those jurisdictions, our liability will be limited to the maximum extent permitted by applicable law. However, to the extent that Israeli courts apply Israeli law (as required by these Terms), the limitations above shall apply to their fullest extent.</p>
+  </div>
+
+  <div class="section" id="s13">
+    <h2>13. Indemnification</h2>
+    <p>You agree to indemnify, defend, and hold harmless Gravity and its officers, directors, employees, agents, and successors from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or in any way connected with:</p>
+    <ul>
+      <li>Your access to or use of the Services</li>
+      <li>Your violation of these Terms</li>
+      <li>Your User Content</li>
+      <li>Your violation of any rights of a third party</li>
+      <li>Your violation of any applicable law or regulation</li>
+    </ul>
+    <p>We reserve the right to assume exclusive control of any matter subject to indemnification by you, in which case you agree to cooperate with us in asserting available defenses.</p>
+  </div>
+
+  <div class="section" id="s14">
+    <h2>14. Termination</h2>
+    <h3>Termination by You</h3>
+    <p>You may terminate your account at any time by canceling your subscription through your account settings or by contacting us at <a href="mailto:legal@growgravity.com">legal@growgravity.com</a>. Termination is effective at the end of the current billing period.</p>
+    <h3>Termination by Us</h3>
+    <p>We may suspend or terminate your account and access to the Services immediately, without prior notice, if:</p>
+    <ul>
+      <li>You breach these Terms in any material way</li>
+      <li>We are required to do so by law or court order</li>
+      <li>We reasonably believe your use of the Services poses a risk to us, other users, or third parties</li>
+      <li>You fail to pay applicable fees</li>
+    </ul>
+    <h3>Effect of Termination</h3>
+    <p>Upon termination, your right to use the Services ceases immediately. We may delete your account data after a reasonable retention period in accordance with our Privacy Policy. Sections of these Terms that by their nature should survive termination (including but not limited to Sections 8, 11, 12, 13, and 15) will continue in full force and effect.</p>
+  </div>
+
+  <div class="section" id="s15">
+    <h2>15. Governing Law and Jurisdiction</h2>
+    <div class="notice">
+      <p><strong>These Terms are governed exclusively by Israeli law.</strong> Any dispute arising out of or related to these Terms or the Services shall be subject to the exclusive jurisdiction of the competent courts located in Tel Aviv-Jaffa, Israel.</p>
+    </div>
+    <p>By using the Services, you irrevocably consent to the personal jurisdiction of such courts and waive any objection to the laying of venue in Tel Aviv-Jaffa, Israel.</p>
+    <p>If you are accessing the Services from outside Israel, you do so at your own initiative and are responsible for compliance with your local laws to the extent your local laws are applicable. However, these Terms and any disputes arising hereunder are governed solely by Israeli law, and we make no representation that the Services comply with the laws of any jurisdiction other than Israel.</p>
+    <p>The United Nations Convention on Contracts for the International Sale of Goods does not apply to these Terms.</p>
+  </div>
+
+  <div class="section" id="s16">
+    <h2>16. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. When we make material changes, we will notify you by email (if we have your address on file) or by posting a prominent notice on the website at least 14 days before the changes take effect.</p>
+    <p>Your continued use of the Services after the effective date of any changes constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, you must stop using the Services before the effective date.</p>
+    <p>We encourage you to review these Terms periodically. The "Last updated" date at the top of this page reflects the most recent revision.</p>
+  </div>
+
+  <div class="section" id="s17">
+    <h2>17. Contact Us</h2>
+    <p>If you have questions about these Terms, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:legal@growgravity.com">legal@growgravity.com</a></li>
+      <li><strong>Website:</strong> <a href="https://growgravity.com">growgravity.com</a></li>
+    </ul>
+    <p>We aim to respond to all inquiries within 5 business days.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <a href="index.html" class="flogo">
+      <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+      <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+    </a>
+    <div class="flinks">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <p class="fcopy">&copy; 2025 Gravity &nbsp;&middot;&nbsp; Governed by Israeli law</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    document.getElementById('isun').style.display = isDark ? 'none' : '';
+    document.getElementById('imoon').style.display = isDark ? '' : 'none';
+  }
+
+  (function(){
+    const isDark = document.documentElement.classList.contains('dark');
+    document.getElementById('isun').style.display = isDark ? 'none' : '';
+    document.getElementById('imoon').style.display = isDark ? '' : 'none';
+  })();
+</script>
+
+</body>
+</html>

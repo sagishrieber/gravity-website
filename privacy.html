@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Gravity</title>
+  <meta name="description" content="Gravity privacy policy — how we collect, use, and protect your data under Israeli law.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
+  <style>
+    :root {
+      --bg:#F5F0ED;--bg2:#EDE6E1;--card:#FFFFFF;--border:#D8CFC9;
+      --t1:#1a1410;--t2:rgba(26,20,16,.72);--t3:rgba(26,20,16,.68);
+      --acc:#7A5C4A;--hdr:rgba(245,240,237,.9);--glow:rgba(122,92,74,.1);
+      --shadow:0 1px 3px rgba(26,20,16,.05),0 4px 20px rgba(26,20,16,.04);
+      --btn-t:#FAF7F5;
+    }
+    :root.dark {
+      --bg:#0C0B0A;--bg2:#141210;--card:#1A1714;--border:#2C2520;
+      --t1:#F5F0ED;--t2:rgba(245,240,237,.72);--t3:rgba(245,240,237,.60);
+      --acc:#C9A898;--hdr:rgba(12,11,10,.9);--glow:rgba(201,168,152,.09);
+      --shadow:none;--btn-t:#0C0B0A;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Urbanist',sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;transition:background .35s,color .35s}
+    a{color:var(--acc);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* HEADER */
+    .hdr{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:1000;
+      width:calc(100% - 40px);max-width:1160px;height:62px;
+      display:flex;align-items:center;justify-content:space-between;padding:0 24px;
+      background:var(--hdr);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+      border:1px solid var(--border);border-radius:18px;transition:background .35s,border-color .35s}
+    .hdr-logo img{height:26px}
+    .logo-d{display:block}.logo-l{display:none}
+    :root.dark .logo-d{display:none}:root.dark .logo-l{display:block}
+    .hdr-right{display:flex;align-items:center;gap:8px}
+    .ico-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);
+      display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0}
+    .ico-btn:hover{border-color:var(--acc);background:var(--glow)}
+    .ico-btn svg{width:16px;height:16px}
+    .btn-back{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:100px;
+      font-size:13px;font-weight:600;border:1px solid var(--border);color:var(--t2);
+      background:transparent;cursor:pointer;transition:all .22s;text-decoration:none}
+    .btn-back:hover{border-color:var(--acc);color:var(--acc);background:var(--glow);text-decoration:none}
+
+    /* LAYOUT */
+    .page{max-width:760px;margin:0 auto;padding:120px 24px 80px}
+
+    /* HERO */
+    .page-hero{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+    .page-lbl{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+      color:var(--acc);margin-bottom:14px}
+    .page-title{font-family:'Playfair Display',serif;font-size:46px;font-weight:500;line-height:1.15;margin-bottom:16px}
+    .page-meta{font-size:13.5px;color:var(--t3);display:flex;gap:24px;flex-wrap:wrap}
+    .page-meta span{display:flex;align-items:center;gap:6px}
+    .page-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+
+    /* TOC */
+    .toc{background:var(--card);border:1px solid var(--border);border-radius:16px;
+      padding:24px 28px;margin-bottom:48px;box-shadow:var(--shadow)}
+    .toc h4{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+      color:var(--t3);margin-bottom:14px}
+    .toc ol{padding-left:18px;display:flex;flex-direction:column;gap:6px}
+    .toc li a{font-size:13.5px;color:var(--t2);transition:color .2s;text-decoration:none}
+    .toc li a:hover{color:var(--acc)}
+
+    /* CONTENT */
+    .section{margin-bottom:48px}
+    .section h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;
+      color:var(--t1);margin-bottom:16px;padding-top:8px}
+    .section h3{font-size:15px;font-weight:700;color:var(--t1);margin:20px 0 8px}
+    .section p{font-size:15px;color:var(--t2);line-height:1.75;margin-bottom:12px}
+    .section p:last-child{margin-bottom:0}
+    .section ul,.section ol{padding-left:20px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .section li{font-size:15px;color:var(--t2);line-height:1.65}
+    .section li strong{color:var(--t1)}
+
+    /* NOTICE BOX */
+    .notice{background:var(--glow);border:1px solid var(--border);border-left:3px solid var(--acc);
+      border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:20px}
+    .notice p{font-size:13.5px;color:var(--t2);margin:0;line-height:1.65}
+    .notice strong{color:var(--t1)}
+
+    /* FOOTER */
+    .footer{padding:36px 24px 24px;border-top:1px solid var(--border);margin-top:40px}
+    .footer-in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:16px}
+    .flogo img{height:22px}
+    .logo-d{display:block}.logo-l{display:none}
+    :root.dark .logo-d{display:none}:root.dark .logo-l{display:block}
+    .flinks{display:flex;gap:20px;flex-wrap:wrap}
+    .flinks a{font-size:13px;color:var(--t3);transition:color .25s;text-decoration:none}
+    .flinks a:hover{color:var(--acc)}
+    .fcopy{font-size:12px;color:var(--t3);text-align:right}
+
+    @media(max-width:768px){
+      .hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}
+      .page{padding:100px 20px 60px}
+      .page-title{font-size:34px}
+      .footer-in{flex-direction:column;align-items:flex-start}
+      .fcopy{text-align:left}
+    }
+  </style>
+</head>
+<body>
+
+<header class="hdr">
+  <a href="index.html" class="hdr-logo">
+    <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+    <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+  </a>
+  <div class="hdr-right">
+    <button class="ico-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg id="isun" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4" fill="var(--acc)" stroke="none"/>
+        <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      </svg>
+      <svg id="imoon" viewBox="0 0 24 24" style="display:none">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/>
+      </svg>
+    </button>
+    <a href="index.html" class="btn-back">&#8592; Back to site</a>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="page-hero">
+    <p class="page-lbl">Legal</p>
+    <h1 class="page-title">Privacy Policy</h1>
+    <div class="page-meta">
+      <span>Effective: May 1, 2025</span>
+      <span>Last updated: May 4, 2026</span>
+      <span>Governed by Israeli law</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <p><strong>Important:</strong> This Privacy Policy is governed exclusively by the laws of the State of Israel, including the Privacy Protection Law, 5741-1981, and the Privacy Protection Regulations (Data Security), 5777-2017. By using our services, you acknowledge and consent to this policy and its governing jurisdiction.</p>
+  </div>
+
+  <nav class="toc">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#s1">Who We Are</a></li>
+      <li><a href="#s2">Information We Collect</a></li>
+      <li><a href="#s3">How We Use Your Information</a></li>
+      <li><a href="#s4">Legal Basis for Processing</a></li>
+      <li><a href="#s5">Sharing Your Information</a></li>
+      <li><a href="#s6">Cookies and Tracking</a></li>
+      <li><a href="#s7">Data Retention</a></li>
+      <li><a href="#s8">Data Security</a></li>
+      <li><a href="#s9">Your Rights</a></li>
+      <li><a href="#s10">Children's Privacy</a></li>
+      <li><a href="#s11">International Users</a></li>
+      <li><a href="#s12">Changes to This Policy</a></li>
+      <li><a href="#s13">Contact Us</a></li>
+      <li><a href="#s14">Governing Law</a></li>
+    </ol>
+  </nav>
+
+  <div class="section" id="s1">
+    <h2>1. Who We Are</h2>
+    <p>Gravity ("Company," "we," "us," or "our") is a business entity operating under the laws of the State of Israel, providing founder-led growth services including a SaaS platform and done-for-you strategy services.</p>
+    <p>For the purposes of the Privacy Protection Law, 5741-1981 (the "PPL"), Gravity acts as the data controller and owner of the databases in which personal information is stored.</p>
+    <h3>Contact Information</h3>
+    <p>For all privacy-related inquiries: <a href="mailto:hello@growgravity.com">hello@growgravity.com</a></p>
+  </div>
+
+  <div class="section" id="s2">
+    <h2>2. Information We Collect</h2>
+    <h3>Information You Provide Directly</h3>
+    <ul>
+      <li><strong>Identity data:</strong> Full name, professional title, company name</li>
+      <li><strong>Contact data:</strong> Email address, phone number, WhatsApp number</li>
+      <li><strong>Account data:</strong> Username, password (stored encrypted), account preferences</li>
+      <li><strong>Payment data:</strong> Billing address and payment method details (processed by our third-party payment processor; we do not store full card details)</li>
+      <li><strong>Content data:</strong> Posts, ideas, materials, and other content you upload or create within the platform</li>
+      <li><strong>Communication data:</strong> Messages sent via our contact forms, WhatsApp integration, or email</li>
+      <li><strong>Profile data:</strong> LinkedIn and social media profile information you connect or provide</li>
+    </ul>
+    <h3>Information Collected Automatically</h3>
+    <ul>
+      <li><strong>Usage data:</strong> Pages visited, features used, time spent, actions taken within the platform</li>
+      <li><strong>Device data:</strong> Browser type, operating system, IP address, device identifiers</li>
+      <li><strong>Log data:</strong> Access times, error logs, and other technical diagnostics</li>
+      <li><strong>Cookie data:</strong> As described in Section 6 below</li>
+    </ul>
+    <h3>Information from Third Parties</h3>
+    <ul>
+      <li>LinkedIn profile data when you connect your LinkedIn account</li>
+      <li>Scheduling data from TidyCal when you book a meeting</li>
+      <li>Analytics data from Vercel Analytics (anonymized)</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s3">
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Provide, operate, and improve the Gravity platform and services</li>
+      <li>Create and manage your account</li>
+      <li>Process payments and manage subscriptions</li>
+      <li>Communicate with you about your account, updates, and support</li>
+      <li>Send marketing communications where you have given consent</li>
+      <li>Personalize content recommendations and platform features</li>
+      <li>Detect, prevent, and address technical issues, fraud, or misuse</li>
+      <li>Comply with legal obligations under Israeli law</li>
+      <li>Enforce our Terms of Service</li>
+    </ul>
+    <p>We do not sell, rent, or trade your personal information to third parties for their own marketing purposes.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <h2>4. Legal Basis for Processing</h2>
+    <p>Under the Privacy Protection Law, 5741-1981, we process your personal information on the following bases:</p>
+    <ul>
+      <li><strong>Consent:</strong> Where you have given us explicit consent, such as for marketing communications or optional features</li>
+      <li><strong>Contract performance:</strong> Processing necessary to provide the services you have purchased or requested</li>
+      <li><strong>Legal obligation:</strong> Processing required to comply with Israeli law</li>
+      <li><strong>Legitimate interest:</strong> Processing necessary for our legitimate business interests, such as fraud prevention and service improvement, where these do not override your fundamental rights</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s5">
+    <h2>5. Sharing Your Information</h2>
+    <p>We may share your personal information with:</p>
+    <h3>Service Providers</h3>
+    <p>Third-party vendors who assist us in operating our platform, including:</p>
+    <ul>
+      <li><strong>Vercel Inc.</strong> — website hosting and deployment</li>
+      <li><strong>TidyCal</strong> — appointment scheduling</li>
+      <li><strong>Payment processors</strong> — billing and subscription management</li>
+      <li><strong>Communication providers</strong> — email and WhatsApp integration</li>
+    </ul>
+    <p>All service providers are contractually required to protect your information and use it only for the purposes we specify.</p>
+    <h3>Legal Requirements</h3>
+    <p>We may disclose your information if required to do so by Israeli law, court order, or governmental authority, or to protect the rights, property, or safety of Gravity, our users, or others.</p>
+    <h3>Business Transfers</h3>
+    <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction. We will provide notice before your personal information is transferred and becomes subject to a different privacy policy.</p>
+    <p>We do not share your personal information with third parties for their independent marketing or commercial purposes.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <h2>6. Cookies and Tracking Technologies</h2>
+    <p>We use cookies and similar tracking technologies to operate and improve our services. Types of cookies we use:</p>
+    <ul>
+      <li><strong>Essential cookies:</strong> Necessary for the platform to function (login sessions, security). Cannot be disabled.</li>
+      <li><strong>Functional cookies:</strong> Remember your preferences (theme, language settings)</li>
+      <li><strong>Analytics cookies:</strong> Help us understand how users interact with the platform (anonymized data)</li>
+    </ul>
+    <p>You may control cookie settings through your browser settings. Disabling certain cookies may affect functionality of the service.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <h2>7. Data Retention</h2>
+    <p>We retain your personal information for as long as necessary to:</p>
+    <ul>
+      <li>Maintain your active account and provide our services</li>
+      <li>Comply with Israeli legal obligations (including tax records, which must be retained for 7 years under Israeli law)</li>
+      <li>Resolve disputes and enforce our agreements</li>
+    </ul>
+    <p>Upon termination of your account, we will delete or anonymize your personal data within 90 days, except where retention is required by law. Content you have created may be retained in anonymized form for platform improvement purposes.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <h2>8. Data Security</h2>
+    <p>We implement appropriate technical and organizational security measures in accordance with the Privacy Protection Regulations (Data Security), 5777-2017, including:</p>
+    <ul>
+      <li>Encryption of data in transit (TLS/SSL) and at rest</li>
+      <li>Access controls and authentication requirements</li>
+      <li>Regular security assessments</li>
+      <li>Secure data backup procedures</li>
+      <li>Employee training on data protection</li>
+    </ul>
+    <p>While we take all reasonable precautions, no method of transmission or storage is 100% secure. In the event of a data breach that poses a significant risk to your rights, we will notify you and the relevant Israeli authorities as required by law.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <h2>9. Your Rights</h2>
+    <p>Under the Privacy Protection Law, 5741-1981, you have the following rights regarding your personal information:</p>
+    <ul>
+      <li><strong>Right to access:</strong> You may request a copy of the personal information we hold about you</li>
+      <li><strong>Right to correction:</strong> You may request correction of inaccurate or incomplete personal information</li>
+      <li><strong>Right to deletion:</strong> You may request deletion of your personal information, subject to our legal retention obligations</li>
+      <li><strong>Right to object:</strong> You may object to certain processing, including direct marketing</li>
+      <li><strong>Right to withdraw consent:</strong> Where processing is based on consent, you may withdraw it at any time without affecting the lawfulness of prior processing</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:hello@growgravity.com">hello@growgravity.com</a>. We will respond within 30 days. If you are unsatisfied with our response, you may file a complaint with the Israeli Privacy Protection Authority (PPA) at <a href="https://www.gov.il/en/departments/israel_privacy_protection_authority" target="_blank" rel="noopener">gov.il</a>.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <h2>10. Children's Privacy</h2>
+    <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from minors. If we become aware that we have collected personal information from a person under 18 without verified parental consent, we will delete that information promptly.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <h2>11. International Users</h2>
+    <div class="notice">
+      <p><strong>Our services are intended for use within the State of Israel.</strong> If you access or use our services from outside Israel, you do so voluntarily and at your own risk. This Privacy Policy is governed exclusively by Israeli law. We make no representation that our practices comply with the laws of any other jurisdiction, including but not limited to the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), or any other foreign data protection legislation. Users outside Israel are responsible for determining whether their use of our services is in compliance with their local laws.</p>
+    </div>
+    <p>When we transfer data to our service providers outside of Israel, we take steps to ensure appropriate safeguards are in place as required by Israeli law.</p>
+  </div>
+
+  <div class="section" id="s12">
+    <h2>12. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable Israeli law. We will notify you of material changes by:</p>
+    <ul>
+      <li>Posting the updated policy on this page with a revised "Last Updated" date</li>
+      <li>Sending an email notification to registered users</li>
+    </ul>
+    <p>Your continued use of our services after such changes constitutes your acceptance of the updated policy. If you do not agree with the changes, you must discontinue use of our services.</p>
+  </div>
+
+  <div class="section" id="s13">
+    <h2>13. Contact Us</h2>
+    <p>For any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal information, please contact:</p>
+    <p><strong>Gravity</strong><br>
+    Email: <a href="mailto:hello@growgravity.com">hello@growgravity.com</a><br>
+    Website: <a href="https://growgravity.com">growgravity.com</a></p>
+  </div>
+
+  <div class="section" id="s14">
+    <h2>14. Governing Law and Jurisdiction</h2>
+    <div class="notice">
+      <p><strong>This Privacy Policy is governed by and construed exclusively in accordance with the laws of the State of Israel,</strong> including the Privacy Protection Law, 5741-1981, and the Privacy Protection Regulations (Data Security), 5777-2017. Any dispute arising from this policy shall be subject to the exclusive jurisdiction of the competent courts in Tel Aviv-Jaffa, Israel. The United Nations Convention on Contracts for the International Sale of Goods shall not apply.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <div>
+      <div class="flogo">
+        <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+        <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+      </div>
+    </div>
+    <div class="flinks">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:hello@growgravity.com">Contact</a>
+    </div>
+    <p class="fcopy">&copy; 2025 Gravity &nbsp;·&nbsp; All rights reserved</p>
+  </div>
+</footer>
+
+<script>
+  function toggleTheme() {
+    const dark = document.documentElement.classList.toggle('dark');
+    document.getElementById('isun').style.display = dark ? 'none' : 'block';
+    document.getElementById('imoon').style.display = dark ? 'block' : 'none';
+    localStorage.setItem('g-theme', dark ? 'dark' : 'light');
+  }
+  (function(){
+    if(localStorage.getItem('g-theme')==='dark'){
+      document.documentElement.classList.add('dark');
+      document.getElementById('isun').style.display='none';
+      document.getElementById('imoon').style.display='block';
+    }
+  })();
+</script>
+</body>
+</html>
