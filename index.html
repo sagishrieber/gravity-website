@@ -315,6 +315,21 @@
     .fsoc a svg{width:12px;height:12px;fill:var(--svg-f);transition:fill .25s}
     .fsoc a:hover svg{fill:var(--btn-t)}
 
+    /* ── BOOKING ── */
+    .booking-wrap{margin:36px 0 32px;border-radius:20px;overflow:hidden;
+      border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow)}
+    .fcta-paths{display:grid;grid-template-columns:1fr auto 1fr;gap:0;
+      background:var(--card);border:1px solid var(--border);border-radius:16px;
+      box-shadow:var(--shadow);overflow:hidden}
+    .fcta-path{padding:24px 28px;display:flex;flex-direction:column;align-items:flex-start}
+    .fcta-path strong{font-size:15px;font-weight:700;color:var(--t1);margin-bottom:4px}
+    .fcta-path span{font-size:13px;color:var(--t3);line-height:1.5}
+    .fcta-divider{width:1px;background:var(--border)}
+    @media(max-width:600px){
+      .fcta-paths{grid-template-columns:1fr}
+      .fcta-divider{width:auto;height:1px}
+    }
+
     /* ── MOBILE MENU ── */
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
     .hamburger span{display:block;width:22px;height:2px;background:var(--t1);border-radius:2px;transition:all .25s}
@@ -418,7 +433,7 @@
       <a href="#pricing" class="btn btn-primary">
         Start with SaaS — from $79/seat <span class="arr">&#8599;</span>
       </a>
-      <a href="#contact" class="btn btn-ghost">Talk to us about VIP</a>
+      <a href="#contact" class="btn btn-ghost">Book a Strategy Call</a>
     </div>
     <p class="hero-note">Agency: $79/seat (min 2) &nbsp;·&nbsp; Solo: $89/mo &nbsp;·&nbsp; No contracts &nbsp;·&nbsp; Cancel anytime</p>
     <div class="hero-paths">
@@ -661,7 +676,7 @@
       <p class="lbl">VIP Done-for-You</p>
       <h2 class="sec-h">For founders who want it <em>handled.</em></h2>
       <p class="sec-p" style="margin-top:16px">Our VIP service is for top-tier founders and CEOs who want world-class founder-led growth without adding it to their plate. We build the strategy, create the deep assets, and handle the ops — so you show up, and we make it count.</p>
-      <a href="#contact" class="btn btn-primary" style="margin-top:6px">
+      <a href="https://tidycal.com/m204nr5/45-minute-meeting" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:6px">
         Apply for VIP <span class="arr">&#8599;</span>
       </a>
     </div>
@@ -737,17 +752,26 @@
 
 <!-- FINAL CTA -->
 <section class="fcta" id="contact">
-  <div class="fcta-in">
+  <div class="fcta-in" style="max-width:860px">
     <p class="lbl" style="text-align:center;margin-bottom:18px">Ready when you are</p>
     <h2>Start building your <em>gravity</em> today.</h2>
-    <p>Whether you want the SaaS platform, a full team plan, or our VIP service — the first step is a conversation.</p>
-    <div class="fcta-btns">
-      <a href="#pricing" class="btn btn-primary">
-        Start with SaaS <span class="arr">&#8599;</span>
-      </a>
-      <a href="mailto:hello@gravity.so" class="btn btn-ghost">Book a Strategy Call</a>
+    <p>Book a 45-minute strategy call with Gal. No pitch — a real conversation about where you are and what's possible.</p>
+    <div class="booking-wrap">
+      <div id="tidycal-embed" data-path="m204nr5/45-minute-meeting"></div>
     </div>
-    <p class="fcta-note">SaaS from $79/seat (agency) · $89/mo (solo) · VIP by application</p>
+    <div class="fcta-paths">
+      <div class="fcta-path">
+        <strong>SaaS Platform</strong>
+        <span>Start from $79/seat (agency) or $89/mo (solo)</span>
+        <a href="#pricing" class="btn btn-outline" style="margin-top:10px">See pricing <span class="arr">&#8599;</span></a>
+      </div>
+      <div class="fcta-divider"></div>
+      <div class="fcta-path">
+        <strong>VIP Done-for-You</strong>
+        <span>Full strategy, content &amp; ops — by application</span>
+        <a href="https://tidycal.com/m204nr5/45-minute-meeting" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:10px">Apply for VIP <span class="arr">&#8599;</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -827,5 +851,6 @@
   },{threshold:0.08});
   document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
 </script>
+<script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 </body>
 </html>
