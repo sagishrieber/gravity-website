@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gravity — Founder-Led Growth Engine</title>
+  <meta name="description" content="Gravity is the founder-led growth engine for top-tier CEOs and their teams. SaaS platform from $79/seat, plus done-for-you VIP strategy, content, and ops.">
+  <meta property="og:title" content="Gravity — Founder-Led Growth Engine">
+  <meta property="og:description" content="Make founders impossible to ignore. SaaS platform + done-for-you VIP service for top-tier founders and CEOs.">
+  <meta property="og:url" content="https://growgravity.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://growgravity.com/assets/gravity lite with text.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gravity — Founder-Led Growth Engine">
+  <meta name="twitter:description" content="Make founders impossible to ignore. SaaS platform + done-for-you VIP service.">
+  <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -15,8 +25,8 @@
       --border: #D8CFC9;
       --t1: #1a1410;
       --t2: rgba(26,20,16,.72);
-      --t3: rgba(26,20,16,.42);
-      --acc: #8B6F5E;
+      --t3: rgba(26,20,16,.68);
+      --acc: #7A5C4A;
       --acc2: #A0857A;
       --acc3: #6B5548;
       --hdr: rgba(245,240,237,.9);
@@ -33,7 +43,7 @@
       --border: #2C2520;
       --t1: #F5F0ED;
       --t2: rgba(245,240,237,.72);
-      --t3: rgba(245,240,237,.4);
+      --t3: rgba(245,240,237,.60);
       --acc: #C9A898;
       --acc2: #B08878;
       --acc3: #E8D5CC;
@@ -305,14 +315,17 @@
     .fsoc a svg{width:12px;height:12px;fill:var(--svg-f);transition:fill .25s}
     .fsoc a:hover svg{fill:var(--btn-t)}
 
-    /* ── LANG ── */
-    .lang{display:flex;align-items:center;gap:5px;cursor:pointer;user-select:none;padding:0 4px}
-    .lang span{font-size:12px;font-weight:700;letter-spacing:.5px;color:var(--t3);transition:color .25s}
-    .lang span.on{color:var(--acc)}
-    .lsw{width:28px;height:15px;border-radius:8px;background:var(--border);position:relative;transition:background .25s}
-    .lsw::after{content:'';position:absolute;top:2px;left:2px;width:11px;height:11px;
-      border-radius:50%;background:var(--acc);transition:transform .25s}
-    body[dir=rtl] .lsw::after{transform:translateX(13px)}
+    /* ── MOBILE MENU ── */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--t1);border-radius:2px;transition:all .25s}
+    .mob-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:999;
+      background:var(--bg);padding:90px 28px 40px;flex-direction:column;gap:8px}
+    .mob-menu.open{display:flex}
+    .mob-menu a{font-size:22px;font-weight:600;color:var(--t2);padding:14px 0;
+      border-bottom:1px solid var(--border);transition:color .25s}
+    .mob-menu a:hover{color:var(--acc)}
+    .mob-close{position:absolute;top:20px;right:20px;background:none;border:none;
+      font-size:28px;cursor:pointer;color:var(--t2);line-height:1}
 
     /* ── ANIMATIONS ── */
     .fade{opacity:0;transform:translateY(18px);
@@ -331,6 +344,7 @@
     @media(max-width:768px){
       .hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}
       .hdr-nav{display:none}
+      .hamburger{display:flex}
       .hero{padding:100px 20px 60px}
       .hero h1{font-size:40px;letter-spacing:-.5px}
       .hero-sub{font-size:16px}
@@ -364,6 +378,9 @@
     <a href="#vip">VIP Service</a>
     <a href="#team">Team</a>
   </nav>
+  <button class="hamburger" onclick="openMobMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
   <div class="hdr-actions">
     <button class="ico-btn" onclick="toggleTheme()" aria-label="Toggle theme">
       <svg id="isun" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round">
@@ -374,16 +391,22 @@
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/>
       </svg>
     </button>
-    <div class="lang" onclick="toggleLang()">
-      <span id="lEN" class="on">EN</span>
-      <div class="lsw"></div>
-      <span id="lHE">HE</span>
-    </div>
     <a href="#contact" class="btn btn-primary btn-sm">
       Get Started <span class="arr">&#8599;</span>
     </a>
   </div>
 </header>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMobMenu()" aria-label="Close menu">&#x2715;</button>
+  <a href="#platform" onclick="closeMobMenu()">Platform</a>
+  <a href="#features" onclick="closeMobMenu()">Features</a>
+  <a href="#pricing" onclick="closeMobMenu()">Pricing</a>
+  <a href="#vip" onclick="closeMobMenu()">VIP Service</a>
+  <a href="#team" onclick="closeMobMenu()">Team</a>
+  <a href="#contact" onclick="closeMobMenu()" style="margin-top:16px;color:var(--acc)">Get Started ↗</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -790,13 +813,13 @@
     }
   })();
 
-  let lang='en';
-  function toggleLang(){
-    lang=lang==='en'?'he':'en';
-    document.getElementById('lEN').classList.toggle('on',lang==='en');
-    document.getElementById('lHE').classList.toggle('on',lang==='he');
-    document.body.setAttribute('dir',lang==='he'?'rtl':'ltr');
-    document.documentElement.lang=lang;
+  function openMobMenu(){
+    document.getElementById('mobMenu').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeMobMenu(){
+    document.getElementById('mobMenu').classList.remove('open');
+    document.body.style.overflow='';
   }
 
   const obs=new IntersectionObserver(entries=>{
