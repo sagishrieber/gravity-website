@@ -1,0 +1,12 @@
+# Deploy only the real site files. Everything else in this working folder
+# (transcripts, drafts, screenshots, playbooks) stays local and off the domain.
+*
+!index.html
+!privacy.html
+!terms.html
+!master-terms-c6c0753022.html
+!styles.css
+!script.js
+!vercel.json
+!assets
+!assets/**

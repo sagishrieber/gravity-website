@@ -1,3 +1,17 @@
 .DS_Store
 *.DS_Store
 Thumbs.db
+.vercel
+
+# Local working files — not part of the published site
+*.docx
+*_Transcript.md
+Transcripts_and_Videos/
+Sell by Chat Gravity*
+homepage-he.html
+/image-2.png
+/4DA62167-101D-4616-B7F3-C2E23B9BA6B9.png
+/5CEAD3D3-E805-4A51-8484-C59141DD6971.png
+/EC073E2E-99A8-4360-BD2B-F66A9841B9D7.png
+/Gravity Logo - dark 2.svg
+/Gravity Logo - dark.svg

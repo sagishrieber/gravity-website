@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Terms of Service — Gravity Linked</title>
+  <meta name="description" content="Master Terms of Service governing client engagements with Gravity Linked Ltd.">
+  <!-- This page is intentionally unlisted: not linked from the site, not indexed, accessible by direct link only. -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
+  <style>
+    :root {
+      --bg:#F5F0ED;--bg2:#EDE6E1;--card:#FFFFFF;--border:#D8CFC9;
+      --t1:#1a1410;--t2:rgba(26,20,16,.72);--t3:rgba(26,20,16,.68);
+      --acc:#7A5C4A;--hdr:rgba(245,240,237,.9);--glow:rgba(122,92,74,.1);
+      --shadow:0 1px 3px rgba(26,20,16,.05),0 4px 20px rgba(26,20,16,.04);
+      --btn-t:#FAF7F5;
+    }
+    :root.dark {
+      --bg:#0C0B0A;--bg2:#141210;--card:#1A1714;--border:#2C2520;
+      --t1:#F5F0ED;--t2:rgba(245,240,237,.72);--t3:rgba(245,240,237,.60);
+      --acc:#C9A898;--hdr:rgba(12,11,10,.9);--glow:rgba(201,168,152,.09);
+      --shadow:none;--btn-t:#0C0B0A;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Urbanist',sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;transition:background .35s,color .35s}
+    a{color:var(--acc);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* HEADER */
+    .hdr{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:1000;
+      width:calc(100% - 40px);max-width:1160px;height:62px;
+      display:flex;align-items:center;justify-content:space-between;padding:0 24px;
+      background:var(--hdr);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+      border:1px solid var(--border);border-radius:18px;transition:background .35s,border-color .35s}
+    .hdr-logo img{height:26px}
+    .logo-d{display:block}.logo-l{display:none}
+    :root.dark .logo-d{display:none}:root.dark .logo-l{display:block}
+    .hdr-right{display:flex;align-items:center;gap:8px}
+    .ico-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);
+      display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0}
+    .ico-btn:hover{border-color:var(--acc);background:var(--glow)}
+    .ico-btn svg{width:16px;height:16px}
+    .btn-back{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:100px;
+      font-size:13px;font-weight:600;border:1px solid var(--border);color:var(--t2);
+      background:transparent;cursor:pointer;transition:all .22s;text-decoration:none}
+    .btn-back:hover{border-color:var(--acc);color:var(--acc);background:var(--glow);text-decoration:none}
+
+    /* LAYOUT */
+    .page{max-width:760px;margin:0 auto;padding:120px 24px 80px}
+
+    /* HERO */
+    .page-hero{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+    .page-lbl{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+      color:var(--acc);margin-bottom:14px}
+    .page-title{font-family:'Playfair Display',serif;font-size:46px;font-weight:500;line-height:1.15;margin-bottom:16px}
+    .page-meta{font-size:13.5px;color:var(--t3);display:flex;gap:24px;flex-wrap:wrap}
+    .page-meta span{display:flex;align-items:center;gap:6px}
+    .page-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+
+    /* TOC */
+    .toc{background:var(--card);border:1px solid var(--border);border-radius:16px;
+      padding:24px 28px;margin-bottom:48px;box-shadow:var(--shadow)}
+    .toc h4{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+      color:var(--t3);margin-bottom:14px}
+    .toc ol{padding-left:18px;display:flex;flex-direction:column;gap:6px}
+    .toc li a{font-size:13.5px;color:var(--t2);transition:color .2s;text-decoration:none}
+    .toc li a:hover{color:var(--acc)}
+
+    /* CONTENT */
+    .section{margin-bottom:48px}
+    .section h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;
+      color:var(--t1);margin-bottom:16px;padding-top:8px}
+    .section h3{font-size:15px;font-weight:700;color:var(--t1);margin:20px 0 8px}
+    .section p{font-size:15px;color:var(--t2);line-height:1.75;margin-bottom:12px}
+    .section p:last-child{margin-bottom:0}
+    .section ul,.section ol{padding-left:20px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .section li{font-size:15px;color:var(--t2);line-height:1.65}
+    .section li strong{color:var(--t1)}
+
+    /* NOTICE BOX */
+    .notice{background:var(--glow);border:1px solid var(--border);border-left:3px solid var(--acc);
+      border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:20px}
+    .notice p{font-size:13.5px;color:var(--t2);margin:0;line-height:1.65}
+    .notice strong{color:var(--t1)}
+
+    /* FOOTER */
+    .footer{padding:36px 24px 24px;border-top:1px solid var(--border);margin-top:40px}
+    .footer-in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:16px}
+    .flogo img{height:22px}
+    .flinks{display:flex;gap:20px;flex-wrap:wrap}
+    .flinks a{font-size:13px;color:var(--t3);transition:color .25s;text-decoration:none}
+    .flinks a:hover{color:var(--acc)}
+    .fcopy{font-size:12px;color:var(--t3);text-align:right}
+
+    @media(max-width:768px){
+      .hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}
+      .page{padding:100px 20px 60px}
+      .page-title{font-size:34px}
+      .footer-in{flex-direction:column;align-items:flex-start}
+      .fcopy{text-align:left}
+    }
+  </style>
+</head>
+<body>
+
+<header class="hdr">
+  <a href="index.html" class="hdr-logo">
+    <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+    <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+  </a>
+  <div class="hdr-right">
+    <button class="ico-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg id="isun" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4" fill="var(--acc)" stroke="none"/>
+        <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      </svg>
+      <svg id="imoon" viewBox="0 0 24 24" style="display:none">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/>
+      </svg>
+    </button>
+    <a href="index.html" class="btn-back">&#8592; Back to site</a>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="page-hero">
+    <p class="page-lbl">Client Agreement</p>
+    <h1 class="page-title">Master Terms of Service</h1>
+    <div class="page-meta">
+      <span>Gravity Linked Ltd.</span>
+      <span>LinkedIn Strategy &amp; Content Management</span>
+      <span>Last updated: June 15, 2026</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <p><strong>About this document.</strong> These Master Terms govern engagements between Gravity Linked Ltd. and its clients. They are incorporated by reference into every executed Order Form. By executing an Order Form, the Client agrees to be bound by these Master Terms in full.</p>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#s1">Definitions</a></li>
+      <li><a href="#s2">Services</a></li>
+      <li><a href="#s3">Account Access &amp; Client Obligations</a></li>
+      <li><a href="#s4">Content Approval</a></li>
+      <li><a href="#s5">Intellectual Property</a></li>
+      <li><a href="#s6">Fees and Payment</a></li>
+      <li><a href="#s7">Term and Termination</a></li>
+      <li><a href="#s8">Confidentiality</a></li>
+      <li><a href="#s9">Data Protection</a></li>
+      <li><a href="#s10">LinkedIn Platform Compliance</a></li>
+      <li><a href="#s11">Liability</a></li>
+      <li><a href="#s12">Indemnification</a></li>
+      <li><a href="#s13">General</a></li>
+    </ol>
+  </nav>
+
+  <div class="section" id="s1">
+    <h2>1. Definitions</h2>
+    <ul>
+      <li><strong>"Agreement"</strong> means these Master Terms together with any executed Order Form.</li>
+      <li><strong>"AI Tools"</strong> means Gravity Linked's proprietary backend artificial intelligence and content-generation technology.</li>
+      <li><strong>"Approved Content"</strong> means Content submitted to the Client and approved (or deemed approved) under Section 4.</li>
+      <li><strong>"Client Materials"</strong> means all assets, data, and guidelines provided by the Client.</li>
+      <li><strong>"Content"</strong> means posts, captions, profile copy, and other material created for the Client's LinkedIn presence.</li>
+      <li><strong>"Deliverables"</strong> means Content and reports produced under an Order Form.</li>
+      <li><strong>"LinkedIn Terms"</strong> means LinkedIn's User Agreement and policies as amended from time to time.</li>
+      <li><strong>"Order Form"</strong> means a signed document setting out scope, fees, and term, incorporating this Agreement.</li>
+      <li><strong>"Services"</strong> means the strategy, branding, and content management services described in Section 2 and the applicable Order Form.</li>
+      <li><strong>"Term"</strong> means the period specified in an Order Form.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s2">
+    <h2>2. Services</h2>
+    <p>Gravity Linked provides brand and communications advisory services, which may include LinkedIn strategy and content management, executive personal branding, workshops, book-writing guidance, and related advisory services, as set out in the applicable Order Form. Content writing, scheduling, and posting under this Agreement are provided exclusively for LinkedIn; Gravity Linked does not write or post content on any other social media platform or digital channel unless expressly agreed in a separate Order Form. The specific scope, deliverable volumes, posting frequency, and reporting cadence for each engagement are set out in the applicable Order Form. Gravity Linked may adjust its internal processes and AI Tools at any time without notice, provided this does not materially reduce the agreed Deliverables. Gravity Linked may engage subcontractors and third-party service providers (including third-party artificial intelligence models and platforms) to perform any part of the Services, provided Gravity Linked remains responsible for the performance of the Services.</p>
+  </div>
+
+  <div class="section" id="s3">
+    <h2>3. Account Access &amp; Client Obligations</h2>
+    <p>Where required, the Client shall grant Gravity Linked the administrative permissions necessary to operate the Client's LinkedIn account solely for the purpose of providing the Services. The Client remains the account owner and is responsible for compliance with LinkedIn Terms. The Client shall: (a) provide accurate and complete Client Materials in a timely manner; (b) ensure Client Materials do not infringe any third-party rights and that all factual statements contained in Client Materials are accurate; (c) notify Gravity Linked promptly of material changes to its business or branding; (d) designate a named contact responsible for approvals; and (e) comply with LinkedIn Terms at all times. The Client is the publisher of record for all Content posted to its LinkedIn account and bears ultimate responsibility for published Content.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <h2>4. Content Approval</h2>
+    <p>Unless a fully autonomous arrangement is agreed in writing, Gravity Linked shall submit Content to the Client for review before publication. The Client shall respond within the timeframe agreed between the parties. Gravity Linked shall not be liable for claims arising from Content that was approved or deemed approved by the Client, or from inaccuracies in Client Materials. The Client acknowledges that the AI Tools generate Content using machine-learning techniques and that AI-generated drafts may contain inaccuracies, omissions, or stylistic inconsistencies; the Client's review and approval under this Section 4 is the quality gate for all published Content, and Gravity Linked makes no warranty as to the accuracy, completeness, or fitness for purpose of any AI-generated draft prior to Client approval.</p>
+  </div>
+
+  <div class="section" id="s5">
+    <h2>5. Intellectual Property</h2>
+    <p>Gravity Linked retains all rights in its AI Tools, proprietary methodologies, and pre-existing intellectual property. The Client shall not, and shall not permit any third party to: (i) reverse engineer, decompile, or attempt to derive the methodologies underlying the AI Tools; (ii) use any Deliverables or outputs of the Services to develop, train, or benchmark any competing artificial intelligence, content-generation, or LinkedIn-management service; or (iii) extract or scrape data from the AI Tools.</p>
+    <p>Subject to full payment of all fees, Gravity Linked assigns to the Client, to the extent such rights subsist, all intellectual property rights in the Deliverables created specifically for the Client, except for pre-existing materials and third-party content incorporated therein, in respect of which the Client receives a non-exclusive licence. The Client retains ownership of Client Materials and grants Gravity Linked a non-exclusive licence to use them solely to provide the Services during the Term.</p>
+    <p>Notwithstanding the foregoing, Gravity Linked may collect, use, and retain anonymised and aggregated data derived from the Services (including engagement metrics, Content performance data, and learnings from Client Materials processed by the AI Tools) on a perpetual, royalty-free, worldwide basis for the purpose of developing, training, improving, and operating the AI Tools and Gravity Linked's services generally. This right survives termination.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <h2>6. Fees and Payment</h2>
+    <p>Fees are as set out in the Order Form, exclusive of applicable taxes. Unless otherwise agreed, Gravity Linked shall invoice monthly in advance, with payment due within fourteen (14) days of invoice. Gravity Linked may charge interest on overdue amounts at 1.5% per month. Gravity Linked may suspend Services on seven (7) days' written notice if any undisputed invoice remains unpaid. Fee adjustments for renewals require thirty (30) days' prior written notice. Pre-paid fees are non-refundable.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <h2>7. Term and Termination</h2>
+    <p>This Agreement continues until all Order Forms have expired or been terminated. Order Forms auto-renew for successive equal periods unless either party provides thirty (30) days' written notice of non-renewal. Either party may terminate immediately for material uncured breach (after fourteen (14) days' written notice) or insolvency. Gravity Linked may also terminate this Agreement and any Order Form immediately on written notice if the Client engages in conduct that could, in Gravity Linked's reasonable judgement, damage Gravity Linked's reputation, brand, or standing with LinkedIn. On termination: all rights under the Order Form cease; the Client revokes Gravity Linked's LinkedIn access; each party returns or destroys the other's Confidential Information; and accrued payment obligations survive. Sections 5, 6 (accrued), 8, 9, 10, 11, and 12 survive termination.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <h2>8. Confidentiality</h2>
+    <p>Each party shall hold the other's Confidential Information in strict confidence and use it solely for the purposes of this Agreement. Confidential Information may be disclosed only to employees or advisors with a need to know who are bound by equivalent obligations. These obligations do not apply to information that is publicly available through no fault of the receiving party, was already known to the receiving party, is independently developed, or is required to be disclosed by law (provided prompt notice is given to the disclosing party).</p>
+  </div>
+
+  <div class="section" id="s9">
+    <h2>9. Data Protection</h2>
+    <p>Each party shall comply with applicable data protection laws, including the Israeli Protection of Privacy Law, 5741&ndash;1981. To the extent Gravity Linked processes Personal Data on behalf of the Client, it shall do so only on the Client's documented instructions and shall implement appropriate technical and organisational security measures. Where required by applicable law, the parties shall execute a separate data processing agreement.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <h2>10. LinkedIn Platform Compliance</h2>
+    <p>Both parties shall comply with LinkedIn Terms at all times. Gravity Linked shall not be required to perform any act that would, in its reasonable judgement, violate LinkedIn Terms, and may modify the Services accordingly without liability. Gravity Linked does not guarantee any particular reach, engagement, or business outcomes, as LinkedIn's platform features and algorithms are outside its control. If LinkedIn suspends, restricts, or terminates the Client's account for any reason, the Client remains liable for all fees accrued through the date of such action, and Gravity Linked shall have no liability for any loss arising from such suspension or restriction. Where the suspension results from the Client's own conduct (including pre-engagement activity), Gravity Linked may terminate this Agreement and any Order Form on written notice without further obligation.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <h2>11. Liability</h2>
+    <div class="notice">
+      <p>TO THE EXTENT PERMITTED BY LAW, GRAVITY LINKED'S TOTAL LIABILITY SHALL NOT EXCEED THE FEES PAID IN THE THREE (3) MONTHS PRECEDING THE CLAIM. GRAVITY LINKED SHALL NOT BE LIABLE FOR INDIRECT, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR LOSS OF PROFITS OR DATA. NOTHING HEREIN EXCLUDES LIABILITY FOR FRAUD, WILFUL MISCONDUCT, OR LIABILITY THAT CANNOT BE EXCLUDED UNDER ISRAELI LAW.</p>
+    </div>
+  </div>
+
+  <div class="section" id="s12">
+    <h2>12. Indemnification</h2>
+    <p>The Client shall indemnify Gravity Linked against claims arising from: Client Materials; Content approved by the Client; or the Client's breach of this Agreement or LinkedIn Terms. Gravity Linked shall indemnify the Client against claims that its proprietary AI Tools (excluding Client Materials and Approved Content) infringe third-party intellectual property rights, subject to prompt notice and cooperation from the Client.</p>
+  </div>
+
+  <div class="section" id="s13">
+    <h2>13. General</h2>
+    <ul>
+      <li><strong>Governing Law &amp; Jurisdiction:</strong> This Agreement is governed by the laws of the State of Israel. The parties submit to the exclusive jurisdiction of the competent courts of Tel Aviv. Prior to formal proceedings, the parties shall attempt good-faith negotiation for thirty (30) days.</li>
+      <li><strong>Entire Agreement:</strong> This Agreement and all Order Forms constitute the entire agreement; Order Forms prevail in case of conflict.</li>
+      <li><strong>Amendments:</strong> Gravity Linked may amend these Master Terms on thirty (30) days' notice; continued use of the Services constitutes acceptance.</li>
+      <li><strong>Notices:</strong> All notices under this Agreement shall be in writing and sent by email to the addresses specified in the Order Form, or such other address as a party may designate in writing; notices are deemed given on receipt of confirmation of delivery.</li>
+      <li><strong>Assignment:</strong> Client may not assign without consent; Gravity Linked may assign on a corporate restructuring.</li>
+      <li><strong>Force Majeure:</strong> Neither party is liable for delays caused by circumstances beyond reasonable control, including LinkedIn outages and any outage, modification, withdrawal, or policy change affecting third-party artificial intelligence models or platforms relied upon by Gravity Linked.</li>
+      <li><strong>Non-Solicitation of Personnel:</strong> During the Term and for twelve (12) months thereafter, the Client shall not, directly or indirectly, solicit for employment or engagement any Gravity Linked employee or contractor with whom the Client has had material contact in connection with the Services; general public advertising not specifically targeted at such personnel is not a breach of this clause.</li>
+      <li><strong>Severability:</strong> Invalid provisions are modified to the minimum extent necessary; remaining provisions continue.</li>
+      <li><strong>Independent Contractor:</strong> The parties are independent contractors; no partnership, agency, or employment relationship is created.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="execution">
+    <h2>Execution</h2>
+    <p>By executing an Order Form incorporating these Master Terms, the parties agree to be bound by this Agreement as of the Effective Date specified therein.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <a href="index.html" class="flogo">
+      <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+      <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+    </a>
+    <p class="fcopy">&copy; 2026 Gravity Linked Ltd. &nbsp;&middot;&nbsp; Governed by Israeli law</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    document.getElementById('isun').style.display = isDark ? 'none' : '';
+    document.getElementById('imoon').style.display = isDark ? '' : 'none';
+  }
+
+  (function(){
+    const isDark = document.documentElement.classList.contains('dark');
+    document.getElementById('isun').style.display = isDark ? 'none' : '';
+    document.getElementById('imoon').style.display = isDark ? '' : 'none';
+  })();
+</script>
+
+</body>
+</html>
