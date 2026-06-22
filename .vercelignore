@@ -2,6 +2,8 @@
 # (transcripts, drafts, screenshots, playbooks) stays local and off the domain.
 *
 !index.html
+!he.html
+!middleware.js
 !privacy.html
 !terms.html
 !master-terms-c6c0753022.html

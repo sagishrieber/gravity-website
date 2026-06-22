@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Language auto-routing (client-side fallback; Edge Middleware handles geo before this runs).
-       Explicit choice (cookie/localStorage) always wins; otherwise Hebrew browsers go to /he. -->
-  <script>
-  (function(){try{
-    var c=document.cookie.match(/(?:^|;\s*)g-lang=(en|he)/);
-    var pref=(c&&c[1])||(function(){try{return localStorage.getItem('g-lang')}catch(e){return null}})();
-    if(pref==='en')return;
-    if(pref==='he'){location.replace('/he');return;}
-    var l=(navigator.languages&&navigator.languages.length?navigator.languages.join(','):(navigator.language||'')).toLowerCase();
-    if(/(?:^|[,\s])(he|iw)\b/.test(l)){location.replace('/he');}
-  }catch(e){}})();
-  </script>
-  <title>Gravity — Authority That Compounds for Founder-CEOs</title>
+  <title>Gravity — סמכות שמצטברת, למייסדים-מנכ"לים</title>
   <link rel="alternate" hreflang="en" href="https://growgravity.com/">
   <link rel="alternate" hreflang="he" href="https://growgravity.com/he">
   <link rel="alternate" hreflang="x-default" href="https://growgravity.com/">
-  <meta name="description" content="Gravity is a premium advisory that helps founder-CEOs turn who they are, what they know, and what they believe into authority that attracts opportunities and compounds over time.">
-  <meta property="og:title" content="You Are the Gravity Behind Your Company's Growth">
-  <meta property="og:description" content="The founders who stand out don't compete on features or price. They compete on themselves. Gravity helps you turn experience, ideas, and convictions into authority that compounds.">
-  <meta property="og:url" content="https://growgravity.com">
+  <meta name="description" content="Gravity היא חברת ייעוץ פרימיום שעוזרת למייסדים-מנכ"לים להפוך את מי שהם, את מה שהם יודעים ואת מה שהם מאמינים בו לסמכות שמושכת הזדמנויות ומצטברת לאורך זמן.">
+  <meta property="og:title" content="הכוח שמאחורי הצמיחה של החברה שלך — זה אתה">
+  <meta property="og:description" content="המייסדים שבולטים לא מתחרים על פיצ'רים או מחיר. הם מתחרים על עצמם. Gravity עוזרת לך להפוך ניסיון, רעיונות ותפיסות לסמכות שמצטברת.">
+  <meta property="og:url" content="https://growgravity.com/he">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://growgravity.com/assets/gravity lite with text.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="You Are the Gravity Behind Your Company's Growth">
-  <meta name="twitter:description" content="A premium advisory helping founder-CEOs build authority that compounds.">
-  <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
+  <meta name="twitter:title" content="הכוח שמאחורי הצמיחה של החברה שלך — זה אתה">
+  <meta name="twitter:description" content="חברת ייעוץ פרימיום שעוזרת למייסדים-מנכ"לים לבנות סמכות שמצטברת.">
+  <link rel="icon" type="image/svg+xml" href="/assets/Gravity ICON - dark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #F5F0ED;
@@ -460,6 +448,16 @@
       .flinks{flex-direction:column;gap:28px}
       .fbot{flex-direction:column;align-items:flex-start}
     }
+
+    /* ===== Hebrew / RTL overrides ===== */
+    body{font-family:'Assistant',sans-serif}
+    .btn,.nl-input,.nl-submit,.mob-theme{font-family:'Assistant',sans-serif}
+    h1,h2,h3,h4,.sec-h,.ec h3,.oc h4,.nl-bar h2,.fcta h2,.fcta-you,.who-sub,.layer-n,.accent,.estep .enum,.ring-g span,.hero-trust,.expect-note{font-family:'Frank Ruhl Libre',serif}
+    em{font-style:normal}
+    .who-sub,.fcta-you,.accent,.hero-trust,.expect-note{font-style:normal}
+    .hero h1{letter-spacing:normal}
+    .lbl,.eyebrow,.proof-lbl,.layer-n,.ptier,.fcol h5{letter-spacing:normal;text-transform:none}
+    .btn:hover .arr{transform:translate(-2px,-2px)}
   </style>
 </head>
 <body>
@@ -467,19 +465,19 @@
 <!-- HEADER -->
 <header class="hdr">
   <div class="hdr-logo">
-    <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
-    <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+    <img src="/assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+    <img src="/assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
   </div>
   <nav class="hdr-nav">
-    <a href="#method">The Method</a>
-    <a href="#outcome">Outcomes</a>
-    <a href="#engagements">Work With Us</a>
-    <a href="#faq">FAQ</a>
+    <a href="#method">השיטה</a>
+    <a href="#outcome">תוצאות</a>
+    <a href="#engagements">לעבוד איתנו</a>
+    <a href="#faq">שאלות נפוצות</a>
   </nav>
   <div class="hdr-actions">
     <div class="lang-switch" aria-label="Language">
-      <a href="/" class="lang-opt active" onclick="setLang('en')">EN</a>
-      <a href="/he" class="lang-opt" onclick="setLang('he')">HE</a>
+      <a href="/" class="lang-opt" onclick="setLang('en')">EN</a>
+      <a href="/he" class="lang-opt active" onclick="setLang('he')">HE</a>
     </div>
     <button class="ico-btn theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
       <svg id="isun" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round">
@@ -491,7 +489,7 @@
       </svg>
     </button>
     <a href="#contact" class="btn btn-primary btn-sm">
-      Book a Strategy Call <span class="arr">&#8599;</span>
+      קביעת שיחת אסטרטגיה <span class="arr">&#8599;</span>
     </a>
     <button class="hamburger" onclick="openMobMenu()" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -502,63 +500,63 @@
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
   <button class="mob-close" onclick="closeMobMenu()" aria-label="Close menu">&#x2715;</button>
-  <a href="#method" onclick="closeMobMenu()">The Method</a>
-  <a href="#outcome" onclick="closeMobMenu()">Outcomes</a>
-  <a href="#engagements" onclick="closeMobMenu()">Work With Us</a>
-  <a href="#faq" onclick="closeMobMenu()">FAQ</a>
-  <a href="#contact" onclick="closeMobMenu()" style="margin-top:16px;color:var(--acc)">Book a Strategy Call ↗</a>
-  <button class="mob-theme" onclick="toggleTheme()">Appearance<span style="color:var(--acc);font-weight:700">Light / Dark</span></button>
+  <a href="#method" onclick="closeMobMenu()">השיטה</a>
+  <a href="#outcome" onclick="closeMobMenu()">תוצאות</a>
+  <a href="#engagements" onclick="closeMobMenu()">לעבוד איתנו</a>
+  <a href="#faq" onclick="closeMobMenu()">שאלות נפוצות</a>
+  <a href="#contact" onclick="closeMobMenu()" style="margin-top:16px;color:var(--acc)">קביעת שיחת אסטרטגיה ↗</a>
+  <button class="mob-theme" onclick="toggleTheme()">מצב תצוגה<span style="color:var(--acc);font-weight:700">בהיר / כהה</span></button>
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-in">
-    <div class="eyebrow"><span class="dot"></span>Founder-Led Growth</div>
-    <h1>Your company's hardest-to-copy advantage is <em>you</em>.</h1>
-    <p class="hero-sub">Most companies compete on features, service, and price. The founders who pull ahead compete on something no competitor can replicate: themselves.</p>
-    <p class="hero-body">Gravity is a premium advisory for founder-CEOs. We turn your experience, ideas, and convictions into intellectual assets — frameworks, a body of work, a point of view — that attract opportunities and compound into authority over time. Not by manufacturing a personal brand. By uncovering the one already there.</p>
+    <div class="eyebrow"><span class="dot"></span>צמיחה מבוססת-מייסד</div>
+    <h1>היתרון הכי קשה להעתקה בחברה שלך הוא <em>אתה</em>.</h1>
+    <p class="hero-sub">רוב החברות מתחרות על פיצ'רים, שירות ומחיר. המייסדים שפורצים קדימה מתחרים על משהו שאף מתחרה לא יכול לשכפל: עצמם.</p>
+    <p class="hero-body">Gravity היא חברת ייעוץ פרימיום למייסדים-מנכ"לים. אנחנו הופכים את הניסיון, הרעיונות והתפיסות שלך לנכסים אינטלקטואליים — מסגרות חשיבה, גוף עבודה, נקודת מבט — שמושכים הזדמנויות ומצטברים לכדי סמכות לאורך זמן. לא על ידי ייצור מותג אישי, אלא על ידי חשיפת זה שכבר קיים.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">
-        Book a Strategy Call <span class="arr">&#8599;</span>
+        קביעת שיחת אסטרטגיה <span class="arr">&#8599;</span>
       </a>
-      <a href="#method" class="btn btn-ghost">See how it works</a>
+      <a href="#method" class="btn btn-ghost">איך זה עובד</a>
     </div>
-    <p class="hero-note">45 minutes. About your ideas and what's possible — no pitch deck.</p>
-    <p class="hero-trust">For founders who want more than attention. Attention fades. Authority compounds.</p>
+    <p class="hero-note">45 דקות. על הרעיונות שלך ועל מה שאפשרי — בלי מצגת מכירה.</p>
+    <p class="hero-trust">למייסדים שרוצים יותר מתשומת לב. תשומת לב נמוגה. סמכות מצטברת.</p>
   </div>
 </section>
 
 <!-- PROOF STRIP -->
 <section class="proof">
   <div class="proof-in">
-    <p class="proof-lbl">Trusted by founder-CEOs building authority from the inside out</p>
+    <p class="proof-lbl">מייסדים-מנכ"לים שבונים סמכות מבפנים החוצה בוחרים בנו</p>
     <!-- PROOF: swap the dashed placeholder slots below for real client logos / wordmarks once approved -->
     <div class="proof-logos">
-      <div class="logo-slot">Logo</div>
-      <div class="logo-slot">Logo</div>
-      <div class="logo-slot">Logo</div>
-      <div class="logo-slot">Logo</div>
-      <div class="logo-slot">Logo</div>
+      <div class="logo-slot">לוגו</div>
+      <div class="logo-slot">לוגו</div>
+      <div class="logo-slot">לוגו</div>
+      <div class="logo-slot">לוגו</div>
+      <div class="logo-slot">לוגו</div>
     </div>
   </div>
 </section>
 
 <!-- SECTION 2 — THE REAL ADVANTAGE -->
 <section class="stmt">
-  <p class="lbl" style="text-align:center">The Real Advantage</p>
-  <h2 class="sec-h">The world doesn't need more content.<br>It needs more people worth <em>listening</em> to.</h2>
-  <p style="margin-top:8px">AI made content easy to produce — and made most of it sound the same. Your edge was never another content strategy.</p>
-  <p class="lead">It's your perspective. Your convictions. The way you see a problem no one else sees. The frameworks you've built without realizing they were frameworks.</p>
-  <p>The trouble is, most successful founders never stop to turn any of that into something others can learn from. That's where we come in.</p>
+  <p class="lbl" style="text-align:center">היתרון האמיתי</p>
+  <h2 class="sec-h">העולם לא צריך עוד תוכן.<br>הוא צריך עוד אנשים ששווה <em>להקשיב</em> להם.</h2>
+  <p style="margin-top:8px">בינה מלאכותית הפכה יצירת תוכן לקלה — והפכה את רובו לנשמע אותו דבר. היתרון שלך מעולם לא היה עוד אסטרטגיית תוכן.</p>
+  <p class="lead">הוא נקודת המבט שלך. התפיסות שלך. הדרך שבה אתה רואה בעיה שאף אחד אחר לא רואה. המסגרות שבנית מבלי לשים לב שהן מסגרות.</p>
+  <p>הבעיה היא שרוב המייסדים המצליחים אף פעם לא עוצרים כדי להפוך את כל זה למשהו שאחרים יכולים ללמוד ממנו. כאן אנחנו נכנסים לתמונה.</p>
 </section>
 
 <!-- SECTION 3 — THE METHOD -->
 <section class="method" id="method">
   <div class="method-in">
     <div class="method-hdr">
-      <p class="lbl">Our Method</p>
-      <h2 class="sec-h">Three layers of <em>authority</em>.</h2>
-      <p style="margin-top:16px">Authority isn't louder content. It's a foundation built in order — from the inside out. It's also the method we'll walk you through, layer by layer.</p>
+      <p class="lbl">השיטה שלנו</p>
+      <h2 class="sec-h">שלוש שכבות של <em>סמכות</em>.</h2>
+      <p style="margin-top:16px">סמכות היא לא תוכן רועש יותר. היא בסיס שנבנה לפי סדר — מבפנים החוצה. וזו גם השיטה שנעבור איתך, שכבה אחר שכבה.</p>
     </div>
 
     <div class="circles" aria-hidden="true">
@@ -571,44 +569,44 @@
 
     <div class="layers">
       <div class="layer fade">
-        <p class="layer-n">Layer 01</p>
-        <h3>You are the differentiator.</h3>
+        <p class="layer-n">שכבה 01</p>
+        <h3>אתה הבידול.</h3>
         <p class="tname">Intellectual Gravity™</p>
-        <p>In a commodity world, your greatest advantage is who you are — your story, what you stand for and against, what drives you. Through workshops and deep conversations, we surface what makes you impossible to copy.</p>
-        <span class="accent">The force behind everything else.</span>
+        <p>בעולם שבו הכול הופך לסחורה, היתרון הגדול ביותר שלך הוא מי שאתה — הסיפור שלך, מה שאתה תומך בו ומה שאתה מתנגד לו, ומה שמניע אותך. דרך סדנאות ושיחות עומק, אנחנו חושפים את מה שהופך אותך לבלתי ניתן להעתקה.</p>
+        <span class="accent">הכוח שמאחורי כל השאר.</span>
       </div>
       <div class="layer fade">
-        <p class="layer-n">Layer 02</p>
-        <h3>Turn experience into frameworks.</h3>
+        <p class="layer-n">שכבה 02</p>
+        <h3>להפוך ניסיון למסגרות.</h3>
         <p class="tname">Intellectual Property™</p>
-        <p>Most founders carry valuable knowledge; few can articulate it. We shape your distinct way of creating results into frameworks, methodologies, and assets others can repeat and remember. Expertise only becomes valuable when it becomes transferable.</p>
+        <p>לרוב המייסדים יש ידע יקר ערך; מעטים יודעים לנסח אותו. אנחנו מעצבים את הדרך הייחודית שלך ליצור תוצאות לכדי מסגרות, מתודולוגיות ונכסים שאחרים יכולים לחזור עליהם ולזכור. מומחיות הופכת ליקרת ערך רק כשהיא ניתנת להעברה.</p>
         <div class="chips">
-          <span class="chip">Signature frameworks</span>
-          <span class="chip">Thought leadership</span>
-          <span class="chip">Books</span>
-          <span class="chip">Newsletters</span>
-          <span class="chip">Workshops &amp; keynotes</span>
-          <span class="chip">Courses</span>
-          <span class="chip">Company methodologies</span>
+          <span class="chip">מסגרות חתימה</span>
+          <span class="chip">מנהיגות מחשבה</span>
+          <span class="chip">ספרים</span>
+          <span class="chip">ניוזלטרים</span>
+          <span class="chip">סדנאות והרצאות מפתח</span>
+          <span class="chip">קורסים</span>
+          <span class="chip">מתודולוגיות חברה</span>
         </div>
-        <span class="accent">Ideas deserve structure.</span>
+        <span class="accent">לרעיונות מגיע מבנה.</span>
       </div>
       <div class="layer fade">
-        <p class="layer-n">Layer 03</p>
-        <h3>Become known for what you know.</h3>
+        <p class="layer-n">שכבה 03</p>
+        <h3>להפוך למוכר במה שאתה יודע.</h3>
         <p class="tname">Intellectual Authority™</p>
-        <p>Authority isn't built by posting every day. It's built by communicating meaningful ideas, consistently. Once the foundation is clear, we amplify it through:</p>
+        <p>סמכות לא נבנית מפרסום כל יום. היא נבנית מתקשורת עקבית של רעיונות בעלי משמעות. ברגע שהבסיס ברור, אנחנו מגבירים אותו דרך:</p>
         <div class="chips">
-          <span class="chip">LinkedIn thought leadership</span>
-          <span class="chip">Deep original content</span>
-          <span class="chip">Books</span>
-          <span class="chip">Podcasts</span>
-          <span class="chip">Speaking</span>
-          <span class="chip">Community</span>
-          <span class="chip">Strategic networking</span>
-          <span class="chip">Distribution systems</span>
+          <span class="chip">מנהיגות מחשבה בלינקדאין</span>
+          <span class="chip">תוכן עומק מקורי</span>
+          <span class="chip">ספרים</span>
+          <span class="chip">פודקאסטים</span>
+          <span class="chip">הרצאות</span>
+          <span class="chip">קהילה</span>
+          <span class="chip">נטוורקינג אסטרטגי</span>
+          <span class="chip">מערכות הפצה</span>
         </div>
-        <span class="accent">Becoming the person people picture when they think about your category.</span>
+        <span class="accent">להפוך לאדם שאנשים מדמיינים כשהם חושבים על הקטגוריה שלך.</span>
       </div>
     </div>
   </div>
@@ -617,34 +615,34 @@
 <!-- TESTIMONIALS -->
 <section class="tmint">
   <div class="tmint-hdr">
-    <p class="lbl" style="text-align:center">In Their Words</p>
-    <h2 class="sec-h">Founders who stopped <em>blending in</em>.</h2>
-    <p style="margin-top:10px">Real, attributed stories from the founders we work with.</p>
+    <p class="lbl" style="text-align:center">במילים שלהם</p>
+    <h2 class="sec-h">מייסדים שהפסיקו <em>להיטמע ברקע</em>.</h2>
+    <p style="margin-top:10px">סיפורים אמיתיים ומיוחסים מהמייסדים שאיתם אנחנו עובדים.</p>
   </div>
   <!-- TESTIMONIALS: replace the three placeholder cards below with real, attributed client quotes (quote + name + title + company + optional headshot). No fabricated quotes are shipped. -->
   <div class="tgridq">
     <div class="qc fade">
       <div class="qmark">&ldquo;</div>
-      <p class="qtext">A specific, attributed client quote about the transformation will live here — what changed in how they show up, the opportunities it attracted, and what it unlocked.</p>
+      <p class="qtext">כאן יופיע ציטוט לקוח אמיתי ומיוחס על השינוי — מה השתנה באופן שבו הוא מופיע, אילו הזדמנויות זה משך, ומה זה פתח.</p>
       <div class="qwho">
         <div class="qav"></div>
-        <div><div class="qname">Client name</div><div class="qrole">Title, Company</div></div>
+        <div><div class="qname">שם הלקוח</div><div class="qrole">תפקיד, חברה</div></div>
       </div>
     </div>
     <div class="qc fade">
       <div class="qmark">&ldquo;</div>
-      <p class="qtext">A second client story will live here — ideally one that names a concrete result (a keynote, an inbound partnership, a clearer category position).</p>
+      <p class="qtext">כאן יופיע סיפור לקוח שני — רצוי כזה שמציין תוצאה קונקרטית (הרצאת מפתח, שותפות נכנסת, מיצוב קטגוריה ברור יותר).</p>
       <div class="qwho">
         <div class="qav"></div>
-        <div><div class="qname">Client name</div><div class="qrole">Title, Company</div></div>
+        <div><div class="qname">שם הלקוח</div><div class="qrole">תפקיד, חברה</div></div>
       </div>
     </div>
     <div class="qc fade">
       <div class="qmark">&ldquo;</div>
-      <p class="qtext">A third client story will live here — on becoming known for ideas rather than services, and the compounding effect over time.</p>
+      <p class="qtext">כאן יופיע סיפור לקוח שלישי — על להפוך למוכר בזכות רעיונות ולא שירותים, ועל אפקט ההצטברות לאורך זמן.</p>
       <div class="qwho">
         <div class="qav"></div>
-        <div><div class="qname">Client name</div><div class="qrole">Title, Company</div></div>
+        <div><div class="qname">שם הלקוח</div><div class="qrole">תפקיד, חברה</div></div>
       </div>
     </div>
   </div>
@@ -654,50 +652,50 @@
 <section class="outcomes" id="outcome">
   <div class="outcomes-in">
     <div class="outcomes-hdr">
-      <p class="lbl">The Outcome</p>
-      <h2 class="sec-h">What growth actually <em>looks</em> like.</h2>
-      <p style="margin-top:14px">Clients come to us wanting more visibility. What they leave with is bigger.</p>
+      <p class="lbl">התוצאה</p>
+      <h2 class="sec-h">איך צמיחה <em>נראית</em> באמת.</h2>
+      <p style="margin-top:14px">לקוחות מגיעים אלינו כשהם רוצים יותר נראוּת. מה שהם לוקחים איתם גדול בהרבה.</p>
     </div>
     <div class="ogrid">
-      <div class="oc fade"><h4>Clarity</h4><p>Know exactly what you stand for, and how to say it.</p></div>
-      <div class="oc fade"><h4>Positioning</h4><p>Escape the commodity trap.</p></div>
-      <div class="oc fade"><h4>Authority</h4><p>Known for your ideas, not just your services.</p></div>
-      <div class="oc fade"><h4>Opportunities</h4><p>Inbound clients, talent, partners, podcasts, and stages.</p></div>
-      <div class="oc fade"><h4>Leverage</h4><p>Assets that keep working after you stop.</p></div>
-      <div class="oc fade"><h4>Legacy</h4><p>A body of work that outlives the feed.</p></div>
+      <div class="oc fade"><h4>בהירות</h4><p>לדעת בדיוק על מה אתה עומד, ואיך לבטא את זה.</p></div>
+      <div class="oc fade"><h4>מיצוב</h4><p>לצאת ממלכודת הסחורה.</p></div>
+      <div class="oc fade"><h4>סמכות</h4><p>מוכר בזכות הרעיונות שלך, לא רק השירותים.</p></div>
+      <div class="oc fade"><h4>הזדמנויות</h4><p>לקוחות, כישרונות, שותפים, פודקאסטים ובמות שמגיעים אליך.</p></div>
+      <div class="oc fade"><h4>מינוף</h4><p>נכסים שממשיכים לעבוד גם כשאתה עוצר.</p></div>
+      <div class="oc fade"><h4>מורשת</h4><p>גוף עבודה ששורד הרבה אחרי הפיד.</p></div>
     </div>
   </div>
 </section>
 
 <!-- SECTION 4 — WHO WE WORK WITH -->
 <section class="who">
-  <p class="lbl" style="text-align:center">Who We Work With</p>
-  <h2 class="sec-h">We work with founder-CEOs who are still <em>growing</em>.</h2>
-  <p class="who-sub">Not just their companies. Themselves.</p>
-  <p>Our best clients are curious, self-aware, and ambitious. They've already built something meaningful — and they know there's another level. They believe growth starts from within and treat leadership as a lifelong practice. If that sounds like you, we'll probably enjoy working together.</p>
+  <p class="lbl" style="text-align:center">עם מי אנחנו עובדים</p>
+  <h2 class="sec-h">אנחנו עובדים עם מייסדים-מנכ"לים שעדיין <em>צומחים</em>.</h2>
+  <p class="who-sub">לא רק את החברות שלהם. את עצמם.</p>
+  <p>הלקוחות הטובים ביותר שלנו סקרנים, מודעים לעצמם ושאפתנים. הם כבר בנו משהו משמעותי — והם יודעים שיש עוד רמה. הם מאמינים שצמיחה מתחילה מבפנים, ומתייחסים למנהיגות כתרגול לכל החיים. אם זה נשמע כמוך, כנראה ניהנה לעבוד יחד.</p>
 </section>
 
 <!-- SECTION 8 — WHY GRAVITY -->
 <section class="why">
   <div class="why-in">
-    <p class="lbl" style="text-align:center">Why Gravity</p>
-    <h2 class="sec-h">Most agencies help you create content.<br>We help you discover what's worth <em>saying</em>.</h2>
-    <p class="why-lines" style="margin-top:8px">Influence without substance fades.<br>Authority without authenticity feels hollow.<br>Growth without meaning runs empty.</p>
-    <p class="why-creed">We believe people who inspire should inspire others, that ideas deserve to be shared, and that founder-led companies deserve founder-led growth.</p>
+    <p class="lbl" style="text-align:center">למה Gravity</p>
+    <h2 class="sec-h">רוב הסוכנויות עוזרות לך לייצר תוכן.<br>אנחנו עוזרים לך לגלות מה <em>שווה לומר</em>.</h2>
+    <p class="why-lines" style="margin-top:8px">השפעה בלי מהות נמוגה.<br>סמכות בלי אותנטיות מרגישה חלולה.<br>צמיחה בלי משמעות מתרוקנת בסוף.</p>
+    <p class="why-creed">אנחנו מאמינים שאנשים שמעוררים השראה צריכים לעורר השראה באחרים, שלרעיונות מגיע להישמע, ושלחברות מבוססות-מייסד מגיעה צמיחה מבוססת-מייסד.</p>
   </div>
 </section>
 
 <!-- SECTION 6 — HUMAN-LED, AI-POWERED -->
 <section class="aih">
   <div class="aih-in">
-    <p class="lbl">Our Approach</p>
-    <h2 class="sec-h">Human-led. <em>AI</em>-powered.</h2>
-    <p class="aih-sub">Technology should amplify your voice — never replace it.</p>
-    <p>Gravity combines strategy, storytelling, AI systems, and hands-on support to produce at a level that would normally take an in-house media team. Behind every client is a team of strategists, editors, and operators — multiplied by technology.</p>
+    <p class="lbl">הגישה שלנו</p>
+    <h2 class="sec-h">בהובלה אנושית. בעוצמת <em>AI</em>.</h2>
+    <p class="aih-sub">טכנולוגיה צריכה להגביר את הקול שלך — לא להחליף אותו.</p>
+    <p>Gravity משלבת אסטרטגיה, סיפור, מערכות AI ותמיכה צמודה כדי לייצר ברמה שבדרך כלל דורשת צוות מדיה פנימי שלם. מאחורי כל לקוח עומד צוות של אסטרטגים, עורכים ואנשי תפעול — מוכפל בטכנולוגיה.</p>
     <div class="aih-pillars">
-      <span class="aih-pill">Human insight</span>
-      <span class="aih-pill">AI leverage</span>
-      <span class="aih-pill">Real relationships</span>
+      <span class="aih-pill">תובנה אנושית</span>
+      <span class="aih-pill">מינוף AI</span>
+      <span class="aih-pill">מערכות יחסים אמיתיות</span>
     </div>
   </div>
 </section>
@@ -705,58 +703,58 @@
 <!-- SECTION 7 — ENGAGEMENTS -->
 <section class="engage" id="engagements">
   <div class="engage-hdr">
-    <p class="lbl">Work With Us</p>
-    <h2 class="sec-h">Ways to work with <em>us</em>.</h2>
-    <p style="margin-top:14px">Every engagement starts with the same call. Where it goes depends on you.</p>
+    <p class="lbl">לעבוד איתנו</p>
+    <h2 class="sec-h">דרכים לעבוד <em>איתנו</em>.</h2>
+    <p style="margin-top:14px">כל התקשרות מתחילה באותה שיחה. לאן היא ממשיכה — תלוי בך.</p>
   </div>
   <div class="egrid">
     <div class="ec fade">
       <div class="ec-ico">🤝</div>
-      <h3>One-on-One</h3>
-      <p>Personalized, deep collaboration. Hands-on support at every step — from uncovering your ideas to building the assets and authority around them.</p>
+      <h3>אחד-על-אחד</h3>
+      <p>שיתוף פעולה עמוק ומותאם אישית. ליווי צמוד בכל שלב — מחשיפת הרעיונות שלך ועד בניית הנכסים והסמכות סביבם.</p>
     </div>
     <div class="ec feat fade">
       <div class="ec-ico">🌐</div>
-      <h3>Cohorts</h3>
-      <p>Grow alongside other ambitious founders in small groups built for accountability, momentum, and shared insight.</p>
+      <h3>מחזורים</h3>
+      <p>לצמוח לצד מייסדים שאפתנים אחרים בקבוצות קטנות שנבנו למחויבות, מומנטום ותובנות משותפות.</p>
     </div>
     <div class="ec fade">
       <div class="ec-ico">📖</div>
-      <h3>Deep Assets</h3>
-      <p>Books, frameworks, keynotes, newsletters — authority-building projects designed to compound for years.</p>
+      <h3>נכסי עומק</h3>
+      <p>ספרים, מסגרות, הרצאות מפתח, ניוזלטרים — פרויקטים לבניית סמכות שנבנו כדי להצטבר לאורך שנים.</p>
     </div>
   </div>
   <div class="engage-cta">
-    <a href="#contact" class="btn btn-primary btn-lg">Book a Strategy Call <span class="arr">&#8599;</span></a>
+    <a href="#contact" class="btn btn-primary btn-lg">קביעת שיחת אסטרטגיה <span class="arr">&#8599;</span></a>
   </div>
 </section>
 
 <!-- FOUNDERS -->
 <section class="team" id="team">
   <div class="thdr">
-    <p class="lbl">The Founders</p>
-    <h2 class="sec-h">Built by founders, for <em>founders</em>.</h2>
-    <p>A focused partnership with depth — not a bloated agency.</p>
+    <p class="lbl">המייסדים</p>
+    <h2 class="sec-h">נבנה על ידי מייסדים, עבור <em>מייסדים</em>.</h2>
+    <p>שותפות ממוקדת עם עומק — לא סוכנות מנופחת.</p>
   </div>
   <div class="tgrid">
     <div class="tcard fade">
-      <div class="tav"><img src="assets/gal profile image lite.png" alt="Gal Agadi"></div>
+      <div class="tav"><img src="/assets/gal profile image lite.png" alt="Gal Agadi"></div>
       <h3>Gal Agadi</h3>
-      <p class="role">Founder &amp; CEO</p>
-      <p class="bio">Personal-brand strategist and content architect behind Gravity's methodology. Gal helps founders uncover the ideas, story, and convictions that make them impossible to copy — and turn them into authority.</p>
+      <p class="role">מייסד ומנכ"ל</p>
+      <p class="bio">אסטרטג מותג אישי וארכיטקט תוכן שמאחורי המתודולוגיה של Gravity. גל עוזר למייסדים לחשוף את הרעיונות, הסיפור והתפיסות שהופכים אותם לבלתי ניתנים להעתקה — ולהפוך אותם לסמכות.</p>
       <a href="https://www.linkedin.com/in/galagadi/" target="_blank" rel="noopener" class="tcard-li" aria-label="Gal on LinkedIn">
         <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        Connect on LinkedIn
+        התחברו בלינקדאין
       </a>
     </div>
     <div class="tcard fade">
-      <div class="tav"><img src="assets/sagi profile pic.png" alt="Sagi Shrieber"></div>
+      <div class="tav"><img src="/assets/sagi profile pic.png" alt="Sagi Shrieber"></div>
       <h3>Sagi Shrieber</h3>
-      <p class="role">Co-Founder &amp; Partner</p>
-      <p class="bio">Systems thinker, investor, and scaling strategist. Sagi builds the infrastructure and operational backbone that lets Gravity deliver world-class results at scale.</p>
+      <p class="role">מייסד-שותף ושותף</p>
+      <p class="bio">חושב מערכות, משקיע ואסטרטג סקיילינג. שגיא בונה את התשתית והעמוד התפעולי שמאפשרים ל-Gravity לספק תוצאות ברמה עולמית בקנה מידה.</p>
       <a href="https://www.linkedin.com/in/sagishrieber" target="_blank" rel="noopener" class="tcard-li" aria-label="Sagi on LinkedIn">
         <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        Connect on LinkedIn
+        התחברו בלינקדאין
       </a>
     </div>
   </div>
@@ -766,72 +764,72 @@
 <section class="expect">
   <div class="expect-in">
     <div class="expect-hdr">
-      <p class="lbl">Before You Book</p>
-      <h2 class="sec-h">What happens on the <em>call</em>.</h2>
-      <p style="margin-top:10px">A focused 45 minutes — here's how it goes.</p>
+      <p class="lbl">לפני שמתאמים</p>
+      <h2 class="sec-h">מה קורה <em>בשיחה</em>.</h2>
+      <p style="margin-top:10px">45 דקות ממוקדות — ככה זה הולך.</p>
     </div>
     <div class="esteps">
       <div class="estep fade">
         <div class="enum">01</div>
-        <h4>We listen.</h4>
-        <p>You walk us through where you are, what you've built, and where you want to go.</p>
+        <h4>אנחנו מקשיבים.</h4>
+        <p>אתה מספר לנו איפה אתה, מה בנית, ולאן אתה רוצה להגיע.</p>
       </div>
       <div class="estep fade">
         <div class="enum">02</div>
-        <h4>We find the thread.</h4>
-        <p>We pull out the ideas, story, and frameworks already worth building on.</p>
+        <h4>אנחנו מוצאים את החוט.</h4>
+        <p>אנחנו שולפים את הרעיונות, הסיפור והמסגרות ששווה לבנות עליהם כבר עכשיו.</p>
       </div>
       <div class="estep fade">
         <div class="enum">03</div>
-        <h4>You leave with clarity.</h4>
-        <p>A clear read on your biggest authority opportunity — whether or not we work together.</p>
+        <h4>אתה יוצא עם בהירות.</h4>
+        <p>קריאה ברורה של הזדמנות הסמכות הגדולה ביותר שלך — בין אם נעבוד יחד ובין אם לא.</p>
       </div>
     </div>
-    <p class="expect-note">45 minutes with a founder, not a salesperson. No pitch deck, no obligation.</p>
+    <p class="expect-note">45 דקות עם מייסד, לא עם איש מכירות. בלי מצגת, בלי התחייבות.</p>
   </div>
 </section>
 
 <!-- OBJECTION FAQ -->
 <section class="faq" id="faq">
   <div class="faq-hdr">
-    <p class="lbl" style="text-align:center">Honest Answers</p>
-    <h2 class="sec-h">You're probably <em>wondering</em>…</h2>
+    <p class="lbl" style="text-align:center">תשובות כנות</p>
+    <h2 class="sec-h">אתה בטח <em>תוהה</em>…</h2>
   </div>
   <details class="faq-item">
-    <summary>I don't have time for this.</summary>
-    <p>That's the point. We build the systems and team around you so authority compounds on a few focused hours — not your whole calendar. The work scales without scaling your time.</p>
+    <summary>אין לי זמן לזה.</summary>
+    <p>זו בדיוק הנקודה. אנחנו בונים את המערכות והצוות סביבך כך שהסמכות מצטברת על בסיס כמה שעות ממוקדות — לא על כל היומן שלך. העבודה גדלה בלי להגדיל את הזמן שלך.</p>
   </details>
   <details class="faq-item">
-    <summary>Isn't this just personal branding?</summary>
-    <p>No. Personal branding decorates the outside. We start with substance — your ideas, frameworks, and convictions — then build visibility on top of it. Authority without substance fades; we won't sell you that.</p>
+    <summary>זה לא סתם מיתוג אישי?</summary>
+    <p>לא. מיתוג אישי מקשט את החוץ. אנחנו מתחילים מהמהות — הרעיונות, המסגרות והתפיסות שלך — ורק אז בונים נראוּת מעליה. סמכות בלי מהות נמוגה; את זה לא נמכור לך.</p>
   </details>
   <details class="faq-item">
-    <summary>How is this different from a ghostwriter or content agency?</summary>
-    <p>An agency produces posts. We produce intellectual assets — frameworks, a body of work, a point of view — that are yours and compound. The content is the last layer, not the product.</p>
+    <summary>במה זה שונה מגוסט-רייטר או סוכנות תוכן?</summary>
+    <p>סוכנות מייצרת פוסטים. אנחנו מייצרים נכסים אינטלקטואליים — מסגרות, גוף עבודה, נקודת מבט — שהם שלך ומצטברים. התוכן הוא השכבה האחרונה, לא המוצר.</p>
   </details>
   <details class="faq-item">
-    <summary>Will it actually sound like me, or like AI?</summary>
-    <p>Like you. We use AI for leverage and speed, never for voice. Everything starts from deep conversations with you and is shaped by human strategists and editors before it ships.</p>
+    <summary>זה באמת יישמע כמוני, או כמו AI?</summary>
+    <p>כמוך. אנחנו משתמשים ב-AI למינוף ולמהירות, אף פעם לא לקול. הכול מתחיל משיחות עומק איתך, ועובר עיצוב של אסטרטגים ועורכים אנושיים לפני שהוא יוצא.</p>
   </details>
 </section>
 
 <!-- FINAL CTA -->
 <section class="fcta" id="contact">
   <div class="fcta-in">
-    <p class="lbl" style="text-align:center;margin-bottom:18px">Ready when you are</p>
-    <h2>The most valuable asset in your company might be sitting in the <em>CEO</em> chair.</h2>
-    <p class="fcta-you">You.</p>
-    <p>Let's uncover it — and turn it into something that compounds. Authority that attracts opportunities, grows your business, and inspires others.</p>
+    <p class="lbl" style="text-align:center;margin-bottom:18px">מתי שתהיה מוכן</p>
+    <h2>הנכס היקר ביותר בחברה שלך אולי יושב בכיסא <em>המנכ"ל</em>.</h2>
+    <p class="fcta-you">אתה.</p>
+    <p>בוא נחשוף אותו — ונהפוך אותו למשהו שמצטבר. סמכות שמושכת הזדמנויות, מצמיחה את העסק שלך ומעוררת השראה באחרים.</p>
     <div class="booking-wrap">
       <div id="tidycal-embed" data-path="m204nr5/45-minute-meeting"></div>
     </div>
     <div class="fcta-btns">
       <a href="https://tidycal.com/m204nr5/45-minute-meeting" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-        Book a Strategy Call <span class="arr">&#8599;</span>
+        קביעת שיחת אסטרטגיה <span class="arr">&#8599;</span>
       </a>
     </div>
-    <p class="fcta-note">A focused 45-minute conversation about you, your ideas, and what's possible. No pitch deck. No obligation.</p>
-    <p class="fcta-secondary">Not ready to talk? <a href="#newsletter">Read The Weekly instead →</a></p>
+    <p class="fcta-note">שיחה ממוקדת של 45 דקות על מי שאתה, הרעיונות שלך ומה שאפשרי. בלי מצגת. בלי התחייבות.</p>
+    <p class="fcta-secondary">עוד לא מוכן לדבר? <a href="#newsletter">קרא את ה-Weekly במקום →</a></p>
   </div>
 </section>
 
@@ -839,14 +837,14 @@
 <section class="nl-bar" id="newsletter">
   <div class="nl-bar-in">
     <p class="lbl">The Weekly</p>
-    <h2>Ideas that <em>compound</em></h2>
-    <p>A weekly note for founders building authority from the inside out. No noise. No recycled tips. Just thinking worth keeping.</p>
+    <h2>רעיונות <em>שמצטברים</em></h2>
+    <p>מכתב שבועי למייסדים שבונים סמכות מבפנים החוצה. בלי רעש. בלי טיפים ממוחזרים. רק חשיבה ששווה לשמור.</p>
     <form class="nl-form" id="nl-form" onsubmit="nlSubmit(event)">
-      <input class="nl-input" type="email" id="nl-email" placeholder="Your email" required aria-label="Email address">
-      <button class="nl-submit" type="submit">Subscribe</button>
+      <input class="nl-input" type="email" id="nl-email" placeholder="האימייל שלך" required aria-label="Email address">
+      <button class="nl-submit" type="submit">הרשמה</button>
     </form>
-    <p class="nl-success" id="nl-success">You're in. Check your inbox for a confirmation.</p>
-    <p class="nl-note">Weekly. Unsubscribe anytime.</p>
+    <p class="nl-success" id="nl-success">נרשמת! בדוק את תיבת הדואר לאישור.</p>
+    <p class="nl-note">שבועי. ביטול בכל עת.</p>
   </div>
 </section>
 
@@ -856,32 +854,32 @@
     <div class="ftop">
       <div>
         <div class="flogo">
-          <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
-          <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+          <img src="/assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+          <img src="/assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
         </div>
-        <p class="ftag">A premium advisory helping founder-CEOs build authority that compounds.</p>
+        <p class="ftag">חברת ייעוץ פרימיום שעוזרת למייסדים-מנכ"לים לבנות סמכות שמצטברת.</p>
       </div>
       <div class="flinks">
         <div class="fcol">
-          <h5>Explore</h5>
+          <h5>לחקור</h5>
           <ul>
-            <li><a href="#method">The Method</a></li>
-            <li><a href="#outcome">Outcomes</a></li>
-            <li><a href="#engagements">Work With Us</a></li>
+            <li><a href="#method">השיטה</a></li>
+            <li><a href="#outcome">תוצאות</a></li>
+            <li><a href="#engagements">לעבוד איתנו</a></li>
           </ul>
         </div>
         <div class="fcol">
-          <h5>Company</h5>
+          <h5>החברה</h5>
           <ul>
-            <li><a href="#team">Founders</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Book a Call</a></li>
+            <li><a href="#team">המייסדים</a></li>
+            <li><a href="#faq">שאלות נפוצות</a></li>
+            <li><a href="#contact">קביעת שיחה</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="fbot">
-      <p class="fcopy">&copy; 2026 Gravity &nbsp;·&nbsp; <a href="privacy.html" class="fcopy-link">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" class="fcopy-link">Terms</a></p>
+      <p class="fcopy">&copy; 2026 Gravity &nbsp;·&nbsp; <a href="/privacy.html" class="fcopy-link">מדיניות פרטיות</a> &nbsp;·&nbsp; <a href="/terms.html" class="fcopy-link">תנאים</a></p>
       <div class="fsoc">
         <a href="https://www.linkedin.com/company/gravity-brand/" target="_blank" rel="noopener" aria-label="Gravity on LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>

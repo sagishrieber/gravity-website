@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/he", "destination": "/he.html" }
+  ],
   "headers": [
     {
       "source": "/master-terms-c6c0753022.html",
