@@ -457,7 +457,10 @@
     h1,h2,h3,h4,.sec-h,.ec h3,.oc h4,.nl-bar h2,.fcta h2,.fcta-you,.who-sub,.layer-n,.accent,.estep .enum,.ring-g span,.hero-trust,.expect-note{font-family:'Heebo',sans-serif}
     em{font-style:normal}
     .who-sub,.fcta-you,.accent,.hero-trust,.expect-note{font-style:normal}
-    .hero h1{letter-spacing:normal}
+    .hero h1 em,.sec-h em,.fcta h2 em,.nl-bar h2 em{font-style:normal}
+    .hero h1{font-family:'Heebo',sans-serif;letter-spacing:normal}
+    /* beat 2-class base rules that otherwise keep Playfair + faux-italic */
+    .who .who-sub,.fcta .fcta-you,.layer .accent{font-family:'Heebo',sans-serif;font-style:normal}
     .lbl,.eyebrow,.proof-lbl,.layer-n,.ptier,.fcol h5{letter-spacing:normal;text-transform:none}
     .btn:hover .arr{transform:translate(-2px,-2px)}
   </style>
@@ -491,7 +494,7 @@
       </svg>
     </button>
     <a href="#contact" class="btn btn-primary btn-sm">
-      קביעת שיחת אסטרטגיה <span class="arr">&#8599;</span>
+      קביעת שיחת אסטרטגיה <span class="arr">&#8598;</span>
     </a>
     <button class="hamburger" onclick="openMobMenu()" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -506,7 +509,7 @@
   <a href="#outcome" onclick="closeMobMenu()">תוצאות</a>
   <a href="#engagements" onclick="closeMobMenu()">לעבוד איתנו</a>
   <a href="#faq" onclick="closeMobMenu()">שאלות נפוצות</a>
-  <a href="#contact" onclick="closeMobMenu()" style="margin-top:16px;color:var(--acc)">קביעת שיחת אסטרטגיה ↗</a>
+  <a href="#contact" onclick="closeMobMenu()" style="margin-top:16px;color:var(--acc)">קביעת שיחת אסטרטגיה ↖</a>
   <button class="mob-theme" onclick="toggleTheme()">מצב תצוגה<span style="color:var(--acc);font-weight:700">בהיר / כהה</span></button>
 </div>
 
@@ -519,7 +522,7 @@
     <p class="hero-body">Gravity היא חברת ייעוץ פרימיום למייסדים-מנכ"לים. אנחנו הופכים את הניסיון, הרעיונות והתפיסות שלך לנכסים אינטלקטואליים — מסגרות חשיבה, גוף עבודה, נקודת מבט — שמושכים הזדמנויות ומצטברים לכדי סמכות לאורך זמן. לא על ידי ייצור מותג אישי, אלא על ידי חשיפת זה שכבר קיים.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">
-        קביעת שיחת אסטרטגיה <span class="arr">&#8599;</span>
+        קביעת שיחת אסטרטגיה <span class="arr">&#8598;</span>
       </a>
       <a href="#method" class="btn btn-ghost">איך זה עובד</a>
     </div>
@@ -712,7 +715,7 @@
     </div>
   </div>
   <div class="engage-cta">
-    <a href="#contact" class="btn btn-primary btn-lg">קביעת שיחת אסטרטגיה <span class="arr">&#8599;</span></a>
+    <a href="#contact" class="btn btn-primary btn-lg">קביעת שיחת אסטרטגיה <span class="arr">&#8598;</span></a>
   </div>
 </section>
 
@@ -812,11 +815,11 @@
     </div>
     <div class="fcta-btns">
       <a href="https://tidycal.com/m204nr5/45-minute-meeting" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-        קביעת שיחת אסטרטגיה <span class="arr">&#8599;</span>
+        קביעת שיחת אסטרטגיה <span class="arr">&#8598;</span>
       </a>
     </div>
     <p class="fcta-note">שיחה ממוקדת של 45 דקות על מי שאתה, הרעיונות שלך ומה שאפשרי. בלי מצגת. בלי התחייבות.</p>
-    <p class="fcta-secondary">עוד לא מוכן לדבר? <a href="#newsletter">קרא את ה-Weekly במקום →</a></p>
+    <p class="fcta-secondary">עוד לא מוכן לדבר? <a href="#newsletter">קרא את ה-Weekly במקום ←</a></p>
   </div>
 </section>
 
