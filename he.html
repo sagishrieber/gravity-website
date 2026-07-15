@@ -379,11 +379,10 @@
       cursor:pointer;transition:all .25s;white-space:nowrap;flex-shrink:0}
     .nl-submit:hover{background:var(--acc3,var(--acc));transform:translateY(-1px)}
     .nl-note{font-size:11.5px;color:var(--t3);margin-top:14px}
-    .nl-consent{display:flex;gap:9px;align-items:flex-start;max-width:480px;margin:16px auto 0;
-      text-align:right;font-size:12px;line-height:1.5;color:var(--t3);cursor:pointer}
-    .nl-consent input{margin-top:2px;flex-shrink:0;width:15px;height:15px;accent-color:var(--acc);cursor:pointer}
-    .nl-consent a{color:var(--acc);text-decoration:underline}
-    .nl-success{display:none;font-size:15px;color:var(--acc);font-weight:600;margin-top:12px}
+    .nl-note a{color:var(--acc);text-decoration:underline}
+    .nl-embed{max-width:480px;margin:0 auto;border-radius:14px;overflow:hidden;
+      border:1px solid var(--border);box-shadow:var(--shadow);background:#fff}
+    .nl-embed iframe{width:100%;height:190px;border:0;display:block}
     @media(max-width:520px){
       .nl-form{flex-direction:column}
       .nl-bar h2{font-size:28px}
@@ -840,16 +839,10 @@
     <p class="lbl">The Weekly</p>
     <h2>רעיונות <em>שמצטברים</em></h2>
     <p>מכתב שבועי למייסדים שבונים סמכות מבפנים החוצה. בלי רעש. בלי טיפים ממוחזרים. רק חשיבה ששווה לשמור.</p>
-    <form class="nl-form" id="nl-form" onsubmit="nlSubmit(event)">
-      <input class="nl-input" type="email" id="nl-email" placeholder="האימייל שלך" required aria-label="Email address">
-      <button class="nl-submit" type="submit">הרשמה</button>
-    </form>
-    <label class="nl-consent">
-      <input type="checkbox" id="nl-consent" required>
-      <span>אני מעוניין/ת לקבל את הניוזלטר השבועי של Gravity ומדי פעם דיוור שיווקי, ומאשר/ת את <a href="/privacy-he.html">מדיניות הפרטיות</a>. אפשר להסיר את ההרשמה בכל עת.</span>
-    </label>
-    <p class="nl-success" id="nl-success">נרשמת! בדוק את תיבת הדואר לאישור.</p>
-    <p class="nl-note">שבועי. ביטול בכל עת.</p>
+    <div class="nl-embed">
+      <iframe src="https://growgravityil.substack.com/embed" title="הרשמה ל-The Weekly" loading="lazy" scrolling="no"></iframe>
+    </div>
+    <p class="nl-note">שבועי. ביטול בכל עת. בהרשמה הנך מאשר/ת את <a href="/privacy-he.html">מדיניות הפרטיות</a>.</p>
   </div>
 </section>
 
@@ -927,27 +920,8 @@
     entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});
   },{threshold:0.08});
   document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
-
-  function nlSubmit(e) {
-    e.preventDefault();
-    if (!document.getElementById('nl-consent').checked) return; // explicit marketing consent required
-    const email = document.getElementById('nl-email').value;
-    // Amendment 40 / Amendment 13: record the consent event with a timestamp + source.
-    const consentRecord = {
-      email: email,
-      marketingConsent: true,
-      privacyPolicyAccepted: true,
-      consentText: document.querySelector('.nl-consent span').innerText.trim(),
-      source: 'growgravity.com/he#newsletter',
-      timestamp: new Date().toISOString()
-    };
-    document.getElementById('nl-form').style.display = 'none';
-    document.getElementById('nl-consent').style.display = 'none';
-    document.getElementById('nl-success').style.display = 'block';
-    // TODO: POST consentRecord to your ESP (Mailchimp/ConvertKit/Beehiiv) so the double
-    // opt-in confirmation + timestamp are stored as the legal record of consent.
-    console.log('Newsletter signup:', consentRecord);
-  }
+  // Newsletter signup is handled by the embedded Substack form (growgravityil.substack.com).
+  // Substack records consent + sends the double opt-in confirmation and manages unsubscribe.
 </script>
 <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 <script src="/compliance.js" defer></script>
