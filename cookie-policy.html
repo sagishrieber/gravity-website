@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy — Gravity</title>
+  <meta name="description" content="How growgravity.com uses cookies and similar technologies, the categories we use, and how to manage your choices.">
+  <link rel="alternate" hreflang="en" href="https://growgravity.com/cookie-policy.html">
+  <link rel="alternate" hreflang="he" href="https://growgravity.com/cookie-policy-he.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
+  <style>
+    :root{--bg:#F5F0ED;--bg2:#EDE6E1;--card:#FFFFFF;--border:#D8CFC9;--t1:#1a1410;--t2:rgba(26,20,16,.72);--t3:rgba(26,20,16,.68);--acc:#7A5C4A;--hdr:rgba(245,240,237,.9);--glow:rgba(122,92,74,.1);--shadow:0 1px 3px rgba(26,20,16,.05),0 4px 20px rgba(26,20,16,.04);--btn-t:#FAF7F5}
+    :root.dark{--bg:#0C0B0A;--bg2:#141210;--card:#1A1714;--border:#2C2520;--t1:#F5F0ED;--t2:rgba(245,240,237,.72);--t3:rgba(245,240,237,.60);--acc:#C9A898;--hdr:rgba(12,11,10,.9);--glow:rgba(201,168,152,.09);--shadow:none;--btn-t:#0C0B0A}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Urbanist',sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;transition:background .35s,color .35s}
+    a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+    .hdr{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 40px);max-width:1160px;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:var(--hdr);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px}
+    .hdr-logo img{height:26px}.logo-d{display:block}.logo-l{display:none}:root.dark .logo-d{display:none}:root.dark .logo-l{display:block}
+    .hdr-right{display:flex;align-items:center;gap:8px}
+    .ico-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0}
+    .ico-btn:hover{border-color:var(--acc);background:var(--glow)}.ico-btn svg{width:16px;height:16px}
+    .btn-back{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:100px;font-size:13px;font-weight:600;border:1px solid var(--border);color:var(--t2);background:transparent;cursor:pointer;transition:all .22s;text-decoration:none}
+    .btn-back:hover{border-color:var(--acc);color:var(--acc);background:var(--glow);text-decoration:none}
+    .page{max-width:760px;margin:0 auto;padding:120px 24px 80px}
+    .page-hero{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+    .page-lbl{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
+    .page-title{font-family:'Playfair Display',serif;font-size:46px;font-weight:500;line-height:1.15;margin-bottom:16px}
+    .page-meta{font-size:13.5px;color:var(--t3);display:flex;gap:24px;flex-wrap:wrap}
+    .page-meta span{display:flex;align-items:center;gap:6px}.page-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+    .section{margin-bottom:40px}
+    .section h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:var(--t1);margin-bottom:16px;padding-top:8px}
+    .section p{font-size:15px;color:var(--t2);line-height:1.75;margin-bottom:12px}.section p:last-child{margin-bottom:0}
+    .section ul{padding-left:20px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .section li{font-size:15px;color:var(--t2);line-height:1.65}.section li strong{color:var(--t1)}
+    table{width:100%;border-collapse:collapse;margin:8px 0 12px;font-size:13.5px}
+    th,td{border:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top;color:var(--t2)}
+    th{background:var(--bg2);color:var(--t1);font-weight:600}
+    .footer{padding:36px 24px 24px;border-top:1px solid var(--border);margin-top:40px}
+    .footer-in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .flogo img{height:22px}
+    .flinks{display:flex;gap:20px;flex-wrap:wrap}.flinks a{font-size:13px;color:var(--t3);transition:color .25s;text-decoration:none}.flinks a:hover{color:var(--acc)}
+    .fcopy{font-size:12px;color:var(--t3)}
+    @media(max-width:768px){.hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}.page{padding:100px 20px 60px}.page-title{font-size:34px}.footer-in{flex-direction:column;align-items:flex-start}table{font-size:12.5px}th,td{padding:8px}}
+  </style>
+</head>
+<body>
+<header class="hdr">
+  <a href="index.html" class="hdr-logo">
+    <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+    <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+  </a>
+  <div class="hdr-right">
+    <button class="ico-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg id="isun" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4" fill="var(--acc)" stroke="none"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="imoon" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/></svg>
+    </button>
+    <a href="/cookie-policy-he.html" class="btn-back">עברית</a>
+    <a href="index.html" class="btn-back">&#8592; Back to site</a>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-hero">
+    <p class="page-lbl">Legal</p>
+    <h1 class="page-title">Cookie Policy</h1>
+    <div class="page-meta"><span>Last updated: 8 July 2026</span></div>
+  </div>
+
+  <div class="section">
+    <p>This Cookie Policy explains how growgravity.com, operated by <strong>Gravity Linked Ltd.</strong>, uses cookies and similar technologies (such as browser local storage). It should be read together with our <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>What are cookies?</h2>
+    <p>Cookies are small text files stored on your device when you visit a website. Similar technologies (like local storage) work the same way. They let a site remember your actions and preferences and, where enabled, measure how the site is used.</p>
+  </div>
+
+  <div class="section">
+    <h2>Categories we use</h2>
+    <ul>
+      <li><strong>Strictly necessary</strong> — required for the site to work and to remember your choices (language, theme, accessibility settings, and your cookie-consent choice). Always active.</li>
+      <li><strong>Analytics</strong> — help us understand usage so we can improve the site. Loaded only if you allow them.</li>
+      <li><strong>Marketing</strong> — used to measure and personalize campaigns. Loaded only if you allow them.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Cookies and storage in use</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Type</th><th>Purpose</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr><td>g-consent</td><td>Necessary (cookie)</td><td>Stores your cookie-consent choice</td><td>12 months</td></tr>
+        <tr><td>g-lang</td><td>Necessary (cookie)</td><td>Remembers your language (EN/HE)</td><td>12 months</td></tr>
+        <tr><td>g-a11y</td><td>Necessary (local storage)</td><td>Remembers your accessibility settings</td><td>Until cleared</td></tr>
+        <tr><td>g-theme</td><td>Necessary (local storage)</td><td>Remembers light/dark theme choice</td><td>Until cleared</td></tr>
+        <tr><td>Vercel Analytics</td><td>Analytics</td><td>Aggregated, privacy-friendly usage measurement</td><td>Loaded on consent</td></tr>
+      </tbody>
+    </table>
+    <p>Booking is handled by an embedded third-party scheduling tool (TidyCal), which may set its own cookies when you interact with it.</p>
+  </div>
+
+  <div class="section">
+    <h2>Managing your choices</h2>
+    <p>You can change your consent at any time using the <strong>"Cookie settings"</strong> link in the site footer. You can also block or delete cookies through your browser settings, though some parts of the site may then not work as intended.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <div class="flogo">
+      <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+      <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+    </div>
+    <div class="flinks">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="#" onclick="if(window.gravityConsent){window.gravityConsent.open();}return false;">Cookie settings</a>
+    </div>
+    <p class="fcopy">&copy; 2026 Gravity</p>
+  </div>
+</footer>
+
+<script>
+  function toggleTheme(){const d=document.documentElement.classList.toggle('dark');document.getElementById('isun').style.display=d?'none':'block';document.getElementById('imoon').style.display=d?'block':'none';localStorage.setItem('g-theme',d?'dark':'light');}
+  (function(){if(localStorage.getItem('g-theme')==='dark'){document.documentElement.classList.add('dark');document.getElementById('isun').style.display='none';document.getElementById('imoon').style.display='block';}})();
+</script>
+<script src="/compliance.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מדיניות פרטיות — Gravity</title>
+  <meta name="description" content="מדיניות הפרטיות של Gravity — כיצד אנו אוספים, משתמשים ומגנים על המידע שלך על פי הדין הישראלי.">
+  <link rel="alternate" hreflang="en" href="https://growgravity.com/privacy.html">
+  <link rel="alternate" hreflang="he" href="https://growgravity.com/privacy-he.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
+  <style>
+    :root{--bg:#F5F0ED;--bg2:#EDE6E1;--card:#FFFFFF;--border:#D8CFC9;--t1:#1a1410;--t2:rgba(26,20,16,.72);--t3:rgba(26,20,16,.68);--acc:#7A5C4A;--hdr:rgba(245,240,237,.9);--glow:rgba(122,92,74,.1);--shadow:0 1px 3px rgba(26,20,16,.05),0 4px 20px rgba(26,20,16,.04);--btn-t:#FAF7F5}
+    :root.dark{--bg:#0C0B0A;--bg2:#141210;--card:#1A1714;--border:#2C2520;--t1:#F5F0ED;--t2:rgba(245,240,237,.72);--t3:rgba(245,240,237,.60);--acc:#C9A898;--hdr:rgba(12,11,10,.9);--glow:rgba(201,168,152,.09);--shadow:none;--btn-t:#0C0B0A}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Urbanist',sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;direction:rtl;transition:background .35s,color .35s}
+    a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+    .hdr{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 40px);max-width:1160px;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:var(--hdr);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px}
+    .hdr-logo img{height:26px}.logo-d{display:block}.logo-l{display:none}:root.dark .logo-d{display:none}:root.dark .logo-l{display:block}
+    .hdr-right{display:flex;align-items:center;gap:8px}
+    .ico-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0}
+    .ico-btn:hover{border-color:var(--acc);background:var(--glow)}.ico-btn svg{width:16px;height:16px}
+    .btn-back{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:100px;font-size:13px;font-weight:600;border:1px solid var(--border);color:var(--t2);background:transparent;cursor:pointer;transition:all .22s;text-decoration:none}
+    .btn-back:hover{border-color:var(--acc);color:var(--acc);background:var(--glow);text-decoration:none}
+    .page{max-width:760px;margin:0 auto;padding:120px 24px 80px}
+    .page-hero{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+    .page-lbl{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--acc);margin-bottom:14px}
+    .page-title{font-family:'Playfair Display',serif;font-size:46px;font-weight:500;line-height:1.15;margin-bottom:16px}
+    .page-meta{font-size:13.5px;color:var(--t3);display:flex;gap:24px;flex-wrap:wrap}
+    .page-meta span{display:flex;align-items:center;gap:6px}.page-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+    .toc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 28px;margin-bottom:48px;box-shadow:var(--shadow)}
+    .toc h4{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--t3);margin-bottom:14px}
+    .toc ol{padding-right:18px;padding-left:0;display:flex;flex-direction:column;gap:6px}
+    .toc li a{font-size:13.5px;color:var(--t2);transition:color .2s;text-decoration:none}.toc li a:hover{color:var(--acc)}
+    .section{margin-bottom:40px}
+    .section h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:var(--t1);margin-bottom:16px;padding-top:8px}
+    .section h3{font-size:15px;font-weight:700;color:var(--t1);margin:20px 0 8px}
+    .section p{font-size:15px;color:var(--t2);line-height:1.75;margin-bottom:12px}.section p:last-child{margin-bottom:0}
+    .section ul{padding-right:20px;padding-left:0;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .section li{font-size:15px;color:var(--t2);line-height:1.65}.section li strong{color:var(--t1)}
+    .notice{background:var(--glow);border:1px solid var(--border);border-right:3px solid var(--acc);border-radius:12px 0 0 12px;padding:16px 20px;margin-bottom:20px}
+    .notice p{font-size:13.5px;color:var(--t2);margin:0;line-height:1.65}.notice strong{color:var(--t1)}
+    .footer{padding:36px 24px 24px;border-top:1px solid var(--border);margin-top:40px}
+    .footer-in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .flogo img{height:22px}
+    .flinks{display:flex;gap:20px;flex-wrap:wrap}.flinks a{font-size:13px;color:var(--t3);transition:color .25s;text-decoration:none}.flinks a:hover{color:var(--acc)}
+    .fcopy{font-size:12px;color:var(--t3)}
+    @media(max-width:768px){.hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}.page{padding:100px 20px 60px}.page-title{font-size:34px}.footer-in{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+<header class="hdr">
+  <a href="index.html" class="hdr-logo">
+    <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+    <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+  </a>
+  <div class="hdr-right">
+    <button class="ico-btn" onclick="toggleTheme()" aria-label="החלפת ערכת נושא">
+      <svg id="isun" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4" fill="var(--acc)" stroke="none"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="imoon" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/></svg>
+    </button>
+    <a href="/privacy.html" class="btn-back">EN</a>
+    <a href="/he" class="btn-back">חזרה לאתר &#8594;</a>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-hero">
+    <p class="page-lbl">משפטי</p>
+    <h1 class="page-title">מדיניות פרטיות</h1>
+    <div class="page-meta">
+      <span>בתוקף: 1 במאי 2025</span>
+      <span>עודכן לאחרונה: 8 ביולי 2026</span>
+      <span>כפוף לדין הישראלי</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <p><strong>חשוב:</strong> מדיניות פרטיות זו כפופה באופן בלעדי לדיני מדינת ישראל, לרבות חוק הגנת הפרטיות, התשמ"א-1981, ותקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017. בשימוש בשירותים שלנו הנך מאשר/ת ומסכים/ה למדיניות זו ולתחולת הדין החל עליה.</p>
+  </div>
+
+  <nav class="toc">
+    <h4>תוכן</h4>
+    <ol>
+      <li><a href="#s1">מי אנחנו</a></li>
+      <li><a href="#s2">איזה מידע אנו אוספים</a></li>
+      <li><a href="#s3">כיצד אנו משתמשים במידע</a></li>
+      <li><a href="#s4">הבסיס החוקי לעיבוד</a></li>
+      <li><a href="#s5">שיתוף המידע</a></li>
+      <li><a href="#s6">עוגיות וטכנולוגיות מעקב</a></li>
+      <li><a href="#s7">שמירת מידע</a></li>
+      <li><a href="#s8">אבטחת מידע</a></li>
+      <li><a href="#s9">הזכויות שלך</a></li>
+      <li><a href="#s10">פרטיות ילדים</a></li>
+      <li><a href="#s11">משתמשים מחוץ לישראל</a></li>
+      <li><a href="#s12">שינויים במדיניות</a></li>
+      <li><a href="#s13">צור קשר</a></li>
+      <li><a href="#s14">הדין החל</a></li>
+    </ol>
+  </nav>
+
+  <div class="section" id="s1">
+    <h2>1. מי אנחנו</h2>
+    <p>Gravity ("החברה", "אנחנו", "אנו" או "שלנו"), המופעלת על ידי <strong>גרביטי לינקד בע"מ</strong> (ח.פ 517043261), הינה ישות עסקית הפועלת על פי דיני מדינת ישראל ומספקת שירותי ייעוץ ואסטרטגיה לצמיחה מבוססת מייסד.</p>
+    <p>לצורכי חוק הגנת הפרטיות, התשמ"א-1981 ("החוק"), Gravity פועלת כבעלת מאגר המידע והשולטת בו, שבו נשמר מידע אישי.</p>
+    <h3>פרטי התקשרות</h3>
+    <p>לכל פנייה בענייני פרטיות: <a href="mailto:hello@growgravity.com">hello@growgravity.com</a></p>
+    <p>גרביטי לינקד בע"מ (ח.פ 517043261), אפרים קציר 9, הוד השרון, ישראל.</p>
+  </div>
+
+  <div class="section" id="s2">
+    <h2>2. איזה מידע אנו אוספים</h2>
+    <h3>מידע שאתה מוסר לנו ישירות</h3>
+    <ul>
+      <li><strong>פרטי זיהוי:</strong> שם מלא, תפקיד מקצועי, שם החברה</li>
+      <li><strong>פרטי התקשרות:</strong> כתובת דוא"ל, ומספר טלפון כאשר תבחר/י למסור אותו</li>
+      <li><strong>פרטי ניוזלטר:</strong> כתובת הדוא"ל שאתה מוסר בעת ההרשמה ל-The Weekly, יחד עם הסכמתך לקבלת דיוור שיווקי</li>
+      <li><strong>פרטי תקשורת:</strong> הודעות שאתה שולח לנו בדוא"ל או בעת תיאום שיחה</li>
+    </ul>
+    <h3>מידע שנאסף באופן אוטומטי</h3>
+    <ul>
+      <li><strong>נתוני שימוש:</strong> עמודים שנצפו, קישורים שנלחצו וזמן השהייה באתר</li>
+      <li><strong>נתוני מכשיר:</strong> סוג הדפדפן, מערכת ההפעלה, כתובת IP ומזהי מכשיר</li>
+      <li><strong>נתוני לוג:</strong> זמני גישה, לוגים של שגיאות ואבחונים טכניים נוספים</li>
+      <li><strong>נתוני עוגיות:</strong> כמתואר בסעיף 6 להלן</li>
+    </ul>
+    <h3>מידע מצדדים שלישיים</h3>
+    <ul>
+      <li>נתוני תיאום פגישות מ-TidyCal כאשר אתה קובע פגישה דרך כלי התיאום המוטמע</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s3">
+    <h2>3. כיצד אנו משתמשים במידע</h2>
+    <p>אנו משתמשים במידע שאנו אוספים כדי:</p>
+    <ul>
+      <li>לספק, להפעיל ולשפר את האתר והשירותים שלנו</li>
+      <li>להשיב לפניותיך ולתאם ולקיים שיחות שאתה קובע איתנו</li>
+      <li>לשלוח לך את הניוזלטר The Weekly ודיוור שיווקי כאשר נתת לכך את הסכמתך</li>
+      <li>לזהות, למנוע ולטפל בתקלות טכניות, בהונאה או בשימוש לרעה</li>
+      <li>לעמוד בחובות חוקיות על פי הדין הישראלי</li>
+      <li>לאכוף את תנאי השימוש שלנו</li>
+    </ul>
+    <p>איננו מוכרים, משכירים או סוחרים במידע האישי שלך לצדדים שלישיים למטרות שיווק עצמאיות שלהם.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <h2>4. הבסיס החוקי לעיבוד</h2>
+    <p>על פי חוק הגנת הפרטיות, התשמ"א-1981, אנו מעבדים את המידע האישי שלך על הבסיסים הבאים:</p>
+    <ul>
+      <li><strong>הסכמה:</strong> כאשר נתת לנו הסכמה מפורשת, כגון לצורך דיוור שיווקי או תכונות אופציונליות</li>
+      <li><strong>קיום חוזה:</strong> עיבוד הנדרש כדי לספק את השירותים שרכשת או ביקשת</li>
+      <li><strong>חובה חוקית:</strong> עיבוד הנדרש לעמידה בדין הישראלי</li>
+      <li><strong>אינטרס לגיטימי:</strong> עיבוד הנדרש לאינטרסים העסקיים הלגיטימיים שלנו, כגון מניעת הונאה ושיפור השירות, כאשר אלה אינם גוברים על זכויותיך הבסיסיות</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s5">
+    <h2>5. שיתוף המידע</h2>
+    <p>אנו עשויים לשתף את המידע האישי שלך עם:</p>
+    <h3>ספקי שירות</h3>
+    <p>ספקים חיצוניים המסייעים לנו בהפעלת האתר, לרבות:</p>
+    <ul>
+      <li><strong>Vercel Inc.</strong> — אחסון ופריסת האתר</li>
+      <li><strong>TidyCal</strong> — תיאום פגישות</li>
+      <li><strong>ספקי תקשורת</strong> — שירותי דוא"ל ודיוור</li>
+    </ul>
+    <p>כל ספקי השירות מחויבים חוזית להגן על המידע שלך ולהשתמש בו רק למטרות שאנו מגדירים.</p>
+    <h3>דרישות חוקיות</h3>
+    <p>אנו עשויים לחשוף את המידע שלך אם נידרש לכך על פי דין ישראלי, צו בית משפט או רשות ממשלתית, או כדי להגן על הזכויות, הרכוש או הבטיחות של Gravity, המשתמשים שלנו או אחרים.</p>
+    <h3>העברות עסקיות</h3>
+    <p>במקרה של מיזוג, רכישה או מכירת נכסים, המידע שלך עשוי לעבור כחלק מהעסקה. נודיע לך לפני שהמידע האישי שלך יועבר ויהפוך כפוף למדיניות פרטיות אחרת.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <h2>6. עוגיות וטכנולוגיות מעקב</h2>
+    <p>אנו משתמשים בעוגיות ובטכנולוגיות דומות כדי להפעיל ולשפר את האתר. ניתן לעיין ולשנות את בחירותיך בכל עת באמצעות הקישור "הגדרות עוגיות" שבתחתית האתר. סוגי העוגיות שבשימוש:</p>
+    <ul>
+      <li><strong>עוגיות הכרחיות:</strong> נדרשות לתפקוד האתר ולזכירת הסכמתך והגדרות הנגישות שלך. לא ניתן לבטלן.</li>
+      <li><strong>עוגיות פונקציונליות:</strong> זוכרות את העדפותיך (ערכת נושא, הגדרות שפה)</li>
+      <li><strong>עוגיות אנליטיקה:</strong> כאשר מופעלות בהסכמתך, מסייעות לנו להבין כיצד מבקרים משתמשים באתר (מידע אנונימי)</li>
+    </ul>
+    <p>ניתן לשלוט בהגדרות העוגיות גם דרך הדפדפן. השבתת עוגיות מסוימות עשויה להשפיע על תפקוד האתר. פירוט מלא ראה ב<a href="cookie-policy-he.html">מדיניות העוגיות</a>.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <h2>7. שמירת מידע</h2>
+    <p>אנו שומרים את המידע האישי שלך למשך הזמן הנדרש כדי:</p>
+    <ul>
+      <li>לספק את שירותינו ולשמר את הקשר איתך</li>
+      <li>לשלוח לך את הניוזלטר כל עוד אתה רשום (ניתן להסיר את ההרשמה בכל עת)</li>
+      <li>לעמוד בחובות חוקיות בישראל (לרבות רשומות מס, שיש לשמרן 7 שנים על פי הדין הישראלי)</li>
+      <li>ליישב מחלוקות ולאכוף את הסכמינו</li>
+    </ul>
+    <p>כאשר תסיר את ההרשמה או תבקש שנמחק את המידע שלך, נמחק או ננקה אותו בתוך פרק זמן סביר, למעט כאשר שמירתו נדרשת על פי דין.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <h2>8. אבטחת מידע</h2>
+    <p>אנו מיישמים אמצעי אבטחה טכניים וארגוניים מתאימים בהתאם לתקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017, לרבות:</p>
+    <ul>
+      <li>הצפנת מידע בהעברה (TLS/SSL) ובמנוחה</li>
+      <li>בקרות גישה ודרישות אימות</li>
+      <li>הערכות אבטחה תקופתיות</li>
+      <li>נהלי גיבוי מאובטחים</li>
+    </ul>
+    <p>אף שאנו נוקטים בכל אמצעי הזהירות הסבירים, אף שיטת העברה או אחסון אינה מאובטחת ב-100%. במקרה של אירוע אבטחה המהווה סיכון משמעותי לזכויותיך, נודיע לך ולרשויות הישראליות הרלוונטיות כנדרש על פי דין.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <h2>9. הזכויות שלך</h2>
+    <p>על פי חוק הגנת הפרטיות, התשמ"א-1981, עומדות לך הזכויות הבאות ביחס למידע האישי שלך:</p>
+    <ul>
+      <li><strong>זכות עיון:</strong> באפשרותך לבקש עותק של המידע האישי שאנו מחזיקים אודותיך</li>
+      <li><strong>זכות תיקון:</strong> באפשרותך לבקש תיקון של מידע שגוי או חלקי</li>
+      <li><strong>זכות מחיקה:</strong> באפשרותך לבקש מחיקת המידע האישי שלך, בכפוף לחובות השמירה החוקיות שלנו</li>
+      <li><strong>זכות התנגדות:</strong> באפשרותך להתנגד לעיבוד מסוים, לרבות דיוור ישיר</li>
+      <li><strong>זכות לחזור בך מהסכמה:</strong> כאשר העיבוד מבוסס על הסכמה, באפשרותך לחזור בך ממנה בכל עת, מבלי לפגוע בחוקיות העיבוד שקדם לכך</li>
+    </ul>
+    <p>למימוש כל אחת מהזכויות הללו, ניתן לפנות אלינו בכתובת <a href="mailto:hello@growgravity.com">hello@growgravity.com</a>. נשיב בתוך 30 יום. אם אינך שבע רצון מתשובתנו, באפשרותך להגיש תלונה לרשות להגנת הפרטיות בכתובת <a href="https://www.gov.il/he/departments/the_privacy_protection_authority" target="_blank" rel="noopener">gov.il</a>.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <h2>10. פרטיות ילדים</h2>
+    <p>שירותינו אינם מיועדים לאנשים מתחת לגיל 18. איננו אוספים ביודעין מידע אישי מקטינים. אם ייוודע לנו שאספנו מידע אישי מאדם מתחת לגיל 18 ללא הסכמת הורה מאומתת, נמחק מידע זה בהקדם.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <h2>11. משתמשים מחוץ לישראל</h2>
+    <div class="notice">
+      <p><strong>שירותינו מיועדים לשימוש בתוך מדינת ישראל.</strong> אם אתה ניגש לשירותינו או משתמש בהם מחוץ לישראל, אתה עושה זאת מרצונך ועל אחריותך. מדיניות פרטיות זו כפופה באופן בלעדי לדין הישראלי.</p>
+    </div>
+    <p>כאשר אנו מעבירים מידע לספקי השירות שלנו מחוץ לישראל, אנו נוקטים צעדים להבטיח שקיימים אמצעי הגנה מתאימים כנדרש על פי הדין הישראלי.</p>
+  </div>
+
+  <div class="section" id="s12">
+    <h2>12. שינויים במדיניות</h2>
+    <p>אנו עשויים לעדכן מדיניות פרטיות זו מעת לעת כדי לשקף שינויים בנהלינו או בדין הישראלי החל. נודיע על שינויים מהותיים באמצעות:</p>
+    <ul>
+      <li>פרסום המדיניות המעודכנת בעמוד זה עם תאריך "עודכן לאחרונה" מעודכן</li>
+      <li>משלוח הודעת דוא"ל למשתמשים רשומים</li>
+    </ul>
+    <p>המשך השימוש שלך בשירותינו לאחר שינויים כאמור מהווה הסכמה למדיניות המעודכנת.</p>
+  </div>
+
+  <div class="section" id="s13">
+    <h2>13. צור קשר</h2>
+    <p>לכל שאלה, פנייה או בקשה בנוגע למדיניות פרטיות זו או לאופן הטיפול במידע האישי שלך, ניתן לפנות אל:</p>
+    <p><strong>Gravity</strong><br>
+    דוא"ל: <a href="mailto:hello@growgravity.com">hello@growgravity.com</a><br>
+    אתר: <a href="https://growgravity.com">growgravity.com</a></p>
+  </div>
+
+  <div class="section" id="s14">
+    <h2>14. הדין החל וסמכות השיפוט</h2>
+    <div class="notice">
+      <p><strong>מדיניות פרטיות זו כפופה ותפורש באופן בלעדי בהתאם לדיני מדינת ישראל,</strong> לרבות חוק הגנת הפרטיות, התשמ"א-1981, ותקנות הגנת הפרטיות (אבטחת מידע), התשע"ז-2017. כל מחלוקת הנובעת ממדיניות זו תהיה נתונה לסמכות השיפוט הבלעדית של בתי המשפט המוסמכים בתל אביב-יפו, ישראל.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <div class="flogo">
+      <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+      <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+    </div>
+    <div class="flinks">
+      <a href="/he">דף הבית</a>
+      <a href="privacy-he.html">מדיניות פרטיות</a>
+      <a href="cookie-policy-he.html">מדיניות עוגיות</a>
+      <a href="terms.html">תנאים</a>
+      <a href="accessibility-he.html">נגישות</a>
+      <a href="#" onclick="if(window.gravityConsent){window.gravityConsent.open();}return false;">הגדרות עוגיות</a>
+    </div>
+    <p class="fcopy">&copy; 2026 Gravity</p>
+  </div>
+</footer>
+
+<script>
+  function toggleTheme(){const d=document.documentElement.classList.toggle('dark');document.getElementById('isun').style.display=d?'none':'block';document.getElementById('imoon').style.display=d?'block':'none';localStorage.setItem('g-theme',d?'dark':'light');}
+  (function(){if(localStorage.getItem('g-theme')==='dark'){document.documentElement.classList.add('dark');document.getElementById('isun').style.display='none';document.getElementById('imoon').style.display='block';}})();
+</script>
+<script src="/compliance.js" defer></script>
+</body>
+</html>

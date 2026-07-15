@@ -74,6 +74,12 @@
     body{font-family:'Urbanist',sans-serif;background:var(--bg);color:var(--t1);line-height:1.6;overflow-x:hidden;transition:background .35s,color .35s}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;height:auto;display:block}
+    /* Keyboard accessibility */
+    .skip-link{position:absolute;left:50%;top:-60px;transform:translateX(-50%);z-index:2000;
+      background:var(--acc);color:var(--btn-t,#fff);padding:10px 20px;border-radius:0 0 10px 10px;
+      font-size:14px;font-weight:600;transition:top .2s}
+    .skip-link:focus{top:0}
+    :focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:3px}
 
     /* ── HEADER ── */
     .hdr{
@@ -385,6 +391,10 @@
       cursor:pointer;transition:all .25s;white-space:nowrap;flex-shrink:0}
     .nl-submit:hover{background:var(--acc3,var(--acc));transform:translateY(-1px)}
     .nl-note{font-size:11.5px;color:var(--t3);margin-top:14px}
+    .nl-consent{display:flex;gap:9px;align-items:flex-start;max-width:480px;margin:16px auto 0;
+      text-align:left;font-size:12px;line-height:1.5;color:var(--t3);cursor:pointer}
+    .nl-consent input{margin-top:2px;flex-shrink:0;width:15px;height:15px;accent-color:var(--acc);cursor:pointer}
+    .nl-consent a{color:var(--acc);text-decoration:underline}
     .nl-success{display:none;font-size:15px;color:var(--acc);font-weight:600;margin-top:12px}
     @media(max-width:520px){
       .nl-form{flex-direction:column}
@@ -465,6 +475,7 @@
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header class="hdr">
@@ -513,7 +524,7 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main">
   <div class="hero-in">
     <div class="eyebrow"><span class="dot"></span>Founder-Led Growth</div>
     <h1>Your company's hardest-to-copy advantage is <em>you</em>.</h1>
@@ -832,6 +843,10 @@
       <input class="nl-input" type="email" id="nl-email" placeholder="Your email" required aria-label="Email address">
       <button class="nl-submit" type="submit">Subscribe</button>
     </form>
+    <label class="nl-consent">
+      <input type="checkbox" id="nl-consent" required>
+      <span>I'd like to receive Gravity's weekly newsletter and occasional marketing emails, and I agree to the <a href="/privacy.html">Privacy Policy</a>. I can unsubscribe at any time.</span>
+    </label>
     <p class="nl-success" id="nl-success">You're in. Check your inbox for a confirmation.</p>
     <p class="nl-note">Weekly. Unsubscribe anytime.</p>
   </div>
@@ -868,7 +883,7 @@
       </div>
     </div>
     <div class="fbot">
-      <p class="fcopy">&copy; 2026 Gravity &nbsp;·&nbsp; <a href="privacy.html" class="fcopy-link">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" class="fcopy-link">Terms</a></p>
+      <p class="fcopy">&copy; 2026 Gravity &nbsp;·&nbsp; <a href="privacy.html" class="fcopy-link">Privacy Policy</a> &nbsp;·&nbsp; <a href="cookie-policy.html" class="fcopy-link">Cookie Policy</a> &nbsp;·&nbsp; <a href="terms.html" class="fcopy-link">Terms</a> &nbsp;·&nbsp; <a href="accessibility.html" class="fcopy-link">Accessibility</a> &nbsp;·&nbsp; <a href="#" class="fcopy-link" onclick="if(window.gravityConsent){window.gravityConsent.open();}return false;">Cookie settings</a></p>
       <div class="fsoc">
         <a href="https://www.linkedin.com/company/gravity-brand/" target="_blank" rel="noopener" aria-label="Gravity on LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -914,13 +929,26 @@
 
   function nlSubmit(e) {
     e.preventDefault();
+    if (!document.getElementById('nl-consent').checked) return; // explicit marketing consent required
     const email = document.getElementById('nl-email').value;
+    // Amendment 40 / Amendment 13: record the consent event with a timestamp + source.
+    const consentRecord = {
+      email: email,
+      marketingConsent: true,
+      privacyPolicyAccepted: true,
+      consentText: document.querySelector('.nl-consent span').innerText.trim(),
+      source: 'growgravity.com/#newsletter',
+      timestamp: new Date().toISOString()
+    };
     document.getElementById('nl-form').style.display = 'none';
+    document.getElementById('nl-consent').style.display = 'none';
     document.getElementById('nl-success').style.display = 'block';
-    // TODO: hook up to your email service (e.g., Mailchimp, ConvertKit, Beehiiv)
-    console.log('Newsletter signup:', email);
+    // TODO: POST consentRecord to your ESP (Mailchimp/ConvertKit/Beehiiv) so the double
+    // opt-in confirmation + timestamp are stored as the legal record of consent.
+    console.log('Newsletter signup:', consentRecord);
   }
 </script>
 <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+<script src="/compliance.js" defer></script>
 </body>
 </html>

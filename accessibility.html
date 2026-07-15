@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Statement — Gravity</title>
+  <meta name="description" content="Gravity accessibility statement — our commitment to Israeli Standard 5568 (WCAG 2.0 AA) and how to reach our accessibility coordinator.">
+  <link rel="alternate" hreflang="en" href="https://growgravity.com/accessibility.html">
+  <link rel="alternate" hreflang="he" href="https://growgravity.com/accessibility-he.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
+  <style>
+    :root{--bg:#F5F0ED;--bg2:#EDE6E1;--card:#FFFFFF;--border:#D8CFC9;--t1:#1a1410;--t2:rgba(26,20,16,.72);--t3:rgba(26,20,16,.68);--acc:#7A5C4A;--hdr:rgba(245,240,237,.9);--glow:rgba(122,92,74,.1);--shadow:0 1px 3px rgba(26,20,16,.05),0 4px 20px rgba(26,20,16,.04);--btn-t:#FAF7F5}
+    :root.dark{--bg:#0C0B0A;--bg2:#141210;--card:#1A1714;--border:#2C2520;--t1:#F5F0ED;--t2:rgba(245,240,237,.72);--t3:rgba(245,240,237,.60);--acc:#C9A898;--hdr:rgba(12,11,10,.9);--glow:rgba(201,168,152,.09);--shadow:none;--btn-t:#0C0B0A}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Urbanist',sans-serif;background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;transition:background .35s,color .35s}
+    a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+    .hdr{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 40px);max-width:1160px;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:var(--hdr);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px}
+    .hdr-logo img{height:26px}.logo-d{display:block}.logo-l{display:none}:root.dark .logo-d{display:none}:root.dark .logo-l{display:block}
+    .hdr-right{display:flex;align-items:center;gap:8px}
+    .ico-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0}
+    .ico-btn:hover{border-color:var(--acc);background:var(--glow)}.ico-btn svg{width:16px;height:16px}
+    .btn-back{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:100px;font-size:13px;font-weight:600;border:1px solid var(--border);color:var(--t2);background:transparent;cursor:pointer;transition:all .22s;text-decoration:none}
+    .btn-back:hover{border-color:var(--acc);color:var(--acc);background:var(--glow);text-decoration:none}
+    .page{max-width:760px;margin:0 auto;padding:120px 24px 80px}
+    .page-hero{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+    .page-lbl{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
+    .page-title{font-family:'Playfair Display',serif;font-size:46px;font-weight:500;line-height:1.15;margin-bottom:16px}
+    .page-meta{font-size:13.5px;color:var(--t3);display:flex;gap:24px;flex-wrap:wrap}
+    .page-meta span{display:flex;align-items:center;gap:6px}.page-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--acc);flex-shrink:0}
+    .section{margin-bottom:40px}
+    .section h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:var(--t1);margin-bottom:16px;padding-top:8px}
+    .section p{font-size:15px;color:var(--t2);line-height:1.75;margin-bottom:12px}.section p:last-child{margin-bottom:0}
+    .section ul{padding-left:20px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    .section li{font-size:15px;color:var(--t2);line-height:1.65}.section li strong{color:var(--t1)}
+    .contact{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 24px;margin:16px 0;box-shadow:var(--shadow)}
+    .contact p{font-size:15px;color:var(--t2);line-height:1.9;margin:0}.contact strong{color:var(--t1)}
+    .footer{padding:36px 24px 24px;border-top:1px solid var(--border);margin-top:40px}
+    .footer-in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .flogo img{height:22px}
+    .flinks{display:flex;gap:20px;flex-wrap:wrap}.flinks a{font-size:13px;color:var(--t3);transition:color .25s;text-decoration:none}.flinks a:hover{color:var(--acc)}
+    .fcopy{font-size:12px;color:var(--t3)}
+    @media(max-width:768px){.hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}.page{padding:100px 20px 60px}.page-title{font-size:34px}.footer-in{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+<header class="hdr">
+  <a href="index.html" class="hdr-logo">
+    <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+    <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+  </a>
+  <div class="hdr-right">
+    <button class="ico-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg id="isun" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4" fill="var(--acc)" stroke="none"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg id="imoon" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/></svg>
+    </button>
+    <a href="/accessibility-he.html" class="btn-back">עברית</a>
+    <a href="index.html" class="btn-back">&#8592; Back to site</a>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-hero">
+    <p class="page-lbl">Accessibility</p>
+    <h1 class="page-title">Accessibility Statement</h1>
+    <div class="page-meta"><span>Last updated: 8 July 2026</span></div>
+  </div>
+
+  <div class="section">
+    <p>Gravity, operated by <strong>Gravity Linked Ltd.</strong> (Company No. 517043261), sees great importance in making its website accessible to everyone, including people with disabilities. We believe every person has the right to use the web with dignity, equality, comfort, and independence, and we invest ongoing effort to make this site usable by the widest possible audience.</p>
+  </div>
+
+  <div class="section">
+    <h2>Level of accessibility on this site</h2>
+    <p>This website is being made accessible in accordance with <strong>Israeli Standard 5568</strong> ("Web Content Accessibility Guidelines"), which is based on the international <strong>WCAG 2.0</strong> guidelines at <strong>Level AA</strong>, and in line with the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 5773–2013.</p>
+  </div>
+
+  <div class="section">
+    <h2>Accessibility features on the site</h2>
+    <ul>
+      <li>A dedicated accessibility menu (the icon at the corner of every page) offering: text enlargement, high contrast, color inversion, grayscale, a light background, link highlighting and underlining, a readable font, heading highlighting, a larger cursor, and an option to stop animations.</li>
+      <li>Keyboard operability of the accessibility menu, with a visible focus indicator.</li>
+      <li>Respect for the operating-system "reduce motion" preference.</li>
+      <li>A responsive layout that works on mobile phones and tablets.</li>
+      <li>Your chosen settings are saved in your browser and persist across pages.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Known limitations</h2>
+    <p>Despite our efforts, some content may not yet be fully adapted — in particular certain animations, embedded third-party content (such as scheduling widgets), and documents. We continue to audit and improve the site's accessibility over time. If you encounter an accessibility problem, please tell us using the details below and we will do our best to fix it.</p>
+  </div>
+
+  <div class="section">
+    <h2>Contacting the accessibility coordinator</h2>
+    <p>If you found an accessibility barrier on the site, or need assistance, you are welcome to contact our accessibility coordinator:</p>
+    <div class="contact">
+      <p>
+        <strong>Gal Agadi</strong> — Accessibility Coordinator<br>
+        Email: <a href="mailto:hello@growgravity.com">hello@growgravity.com</a><br>
+        Phone: <a href="tel:+972528262501">+972 52-826-2501</a><br>
+        Gravity Linked Ltd. (Company No. 517043261)<br>
+        Ephraim Katzir 9, Hod HaSharon, Israel
+      </p>
+    </div>
+    <p>When reporting an issue, please describe the problem, what you were trying to do, the page address (URL), and the browser and device you used, so we can reproduce and resolve it quickly.</p>
+  </div>
+
+  <div class="section">
+    <h2>Enforcement procedure</h2>
+    <p>If your request was not handled to your satisfaction, you may contact the Commission for Equal Rights of Persons with Disabilities at the Ministry of Justice.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <div class="flogo">
+      <img src="assets/Gravity Logo - dark.svg" alt="Gravity" class="logo-d">
+      <img src="assets/Gravity Logo - lite.svg" alt="Gravity" class="logo-l">
+    </div>
+    <div class="flinks">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="accessibility.html">Accessibility</a>
+    </div>
+    <p class="fcopy">&copy; 2026 Gravity</p>
+  </div>
+</footer>
+
+<script>
+  function toggleTheme(){const d=document.documentElement.classList.toggle('dark');document.getElementById('isun').style.display=d?'none':'block';document.getElementById('imoon').style.display=d?'block':'none';localStorage.setItem('g-theme',d?'dark':'light');}
+  (function(){if(localStorage.getItem('g-theme')==='dark'){document.documentElement.classList.add('dark');document.getElementById('isun').style.display='none';document.getElementById('imoon').style.display='block';}})();
+</script>
+<script src="/compliance.js" defer></script>
+</body>
+</html>

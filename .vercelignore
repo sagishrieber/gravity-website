@@ -5,6 +5,7 @@
 !he.html
 !middleware.js
 !privacy.html
+!privacy-he.html
 !terms.html
 !master-terms-c6c0753022.html
 !styles.css
@@ -12,3 +13,8 @@
 !vercel.json
 !assets
 !assets/**
+!compliance.js
+!accessibility.html
+!accessibility-he.html
+!cookie-policy.html
+!cookie-policy-he.html
