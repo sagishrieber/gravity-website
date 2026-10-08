@@ -18,3 +18,12 @@
 !accessibility-he.html
 !cookie-policy.html
 !cookie-policy-he.html
+!webinar.html
+!webinar-thanks.html
+!api
+!api/**
+!package.json
+
+!design-system
+!design-system/**
+!design-system.html

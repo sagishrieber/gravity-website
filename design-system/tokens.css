@@ -1,0 +1,18 @@
+/* Gravity / Book-to-web foundations. Semantic tokens are shared across every page. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Heebo:wght@400;500;600;700;800;900&display=swap');
+:root {
+ --gravity-paper:#F7F4EE; --gravity-ink:#111111; --gravity-red:#E3170A; --gravity-rule:#D8D3C9;
+ --font-body:'Inter',Arial,sans-serif; --font-display:'Inter',Arial,sans-serif;
+ --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px; --space-8:32px; --space-12:48px; --space-16:64px; --space-24:96px;
+ --content-width:1200px; --radius-control:4px; --motion-fast:180ms; --motion-ease:cubic-bezier(.2,.7,.2,1);
+ --bg:var(--gravity-paper); --bg2:#EFEBE3; --card:#FFFDF9; --border:var(--gravity-rule);
+ --t1:var(--gravity-ink); --t2:#42413D; --t3:#66635D; --acc:var(--gravity-red); --acc2:#BE170C; --acc3:#B0160A;
+ --hdr:rgba(247,244,238,.96); --glow:rgba(227,23,10,.035); --glow2:rgba(227,23,10,.08);
+ --shadow:none; --btn-t:#FFFFFF; --svg-f:var(--gravity-ink); --action:var(--gravity-ink); --action-text:var(--gravity-paper);
+}
+:root.dark {
+ --bg:#111111; --bg2:#191918; --card:#1D1D1B; --border:#46443F; --t1:#F7F4EE; --t2:#D5D1C9; --t3:#B1ADA5;
+ --acc:#FF6357; --acc2:#FF8177; --acc3:#FF8177; --hdr:rgba(17,17,17,.96); --glow:rgba(255,99,87,.05); --glow2:rgba(255,99,87,.1);
+ --shadow:none; --btn-t:#111111; --svg-f:#F7F4EE; --action:#F7F4EE; --action-text:#111111;
+}
+html[lang="he"] {--font-body:'Heebo',Arial,sans-serif; --font-display:'Heebo',Arial,sans-serif}

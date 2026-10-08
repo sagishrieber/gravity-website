@@ -19,7 +19,6 @@
   <link rel="icon" type="image/svg+xml" href="/assets/Gravity ICON - dark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@400;500;600;700;800;900&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #F5F0ED;
@@ -446,6 +445,7 @@
     @media(max-width:768px){
       .hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}
       .hdr-nav{display:none}
+      .hdr-login{display:none}
       .hamburger{display:flex}
       .hero{padding:100px 20px 60px}
       .hero h1{font-size:38px;letter-spacing:-.5px}
@@ -473,8 +473,10 @@
     .lbl,.eyebrow,.proof-lbl,.layer-n,.ptier,.fcol h5{letter-spacing:normal;text-transform:none}
     .btn:hover .arr{transform:translate(-2px,-2px)}
   </style>
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/site.css">
 </head>
-<body>
+<body class="gravity-home">
 <a href="#main" class="skip-link">דלג לתוכן</a>
 
 <!-- HEADER -->
@@ -503,6 +505,7 @@
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/>
       </svg>
     </button>
+    <a href="https://app.growgravity.com/sign-in" class="btn btn-ghost btn-sm hdr-login">כניסת לקוחות</a>
     <a href="#contact" class="btn btn-primary btn-sm">
       קביעת שיחת אסטרטגיה <span class="arr">&#8598;</span>
     </a>
@@ -520,12 +523,14 @@
   <a href="#engagements" onclick="closeMobMenu()">לעבוד איתנו</a>
   <a href="#faq" onclick="closeMobMenu()">שאלות נפוצות</a>
   <a href="#contact" onclick="closeMobMenu()" style="margin-top:16px;color:var(--acc)">קביעת שיחת אסטרטגיה ↖</a>
+  <a href="https://app.growgravity.com/sign-in" style="color:var(--t2)">כניסת לקוחות</a>
   <button class="mob-theme" onclick="toggleTheme()">מצב תצוגה<span style="color:var(--acc);font-weight:700">בהיר / כהה</span></button>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="main">
   <div class="hero-in">
+    <div class="hero-copy">
     <div class="eyebrow"><span class="dot"></span>צמיחה מבוססת-מייסד</div>
     <h1>היתרון הכי קשה להעתקה בחברה שלך הוא <em>אתה</em>.</h1>
     <p class="hero-sub">רוב החברות מתחרות על פיצ'רים, שירות ומחיר. המייסדים שפורצים קדימה מתחרים על משהו שאף מתחרה לא יכול לשכפל: עצמם.</p>
@@ -538,6 +543,19 @@
     </div>
     <p class="hero-note">45 דקות. על הרעיונות שלך ועל מה שאפשרי — בלי מצגת מכירה.</p>
     <p class="hero-trust">למייסדים שרוצים יותר מתשומת לב. תשומת לב נמוגה. סמכות מצטברת.</p>
+    </div>
+<figure class="gravity-field" aria-label="סמכות שנבנית מבפנים החוצה ומושכת הזדמנויות">
+  <svg viewBox="0 0 480 480" role="img" aria-labelledby="field-title">
+    <title id="field-title">סמכות שנבנית מבפנים החוצה ומושכת הזדמנויות</title>
+    <g fill="none" class="field-rule" stroke-width="1"><circle cx="240" cy="230" r="72"/><circle cx="240" cy="230" r="139"/><circle cx="240" cy="230" r="204"/></g>
+    <g class="field-dot"><circle cx="98" cy="84" r="7"/><circle cx="397" cy="100" r="5"/><circle cx="444" cy="230" r="6"/><circle cx="125" cy="308" r="5"/><circle cx="345" cy="322" r="7"/><circle cx="230" cy="434" r="5"/><circle cx="307" cy="204" r="5"/><circle cx="44" cy="287" r="4"/></g>
+    <g class="field-rule" stroke-width="1" stroke-dasharray="3 5"><path d="M125 115L194 184M391 230H306M240 389V296"/></g>
+    <g fill="none" class="field-rule" stroke-width="1"><path d="M183 183l11 1-1-11M316 223l-10 7 10 7M233 306l7-10 7 10"/></g>
+    <circle class="field-focus" cx="240" cy="230" r="24"/>
+    <g class="field-type" text-anchor="middle"><text x="240" y="24">Intellectual Authority</text><text x="240" y="81">Intellectual Property</text><text x="240" y="148">Intellectual Gravity</text></g>
+  </svg>
+  <figcaption class="field-caption"><span>01 / איור</span><strong>הזדמנויות נמשכות אליכם.</strong></figcaption>
+</figure>
   </div>
 </section>
 
@@ -559,13 +577,16 @@
       <p style="margin-top:16px">סמכות היא לא תוכן רועש יותר. היא בסיס שנבנה לפי סדר — מבפנים החוצה. וזו גם השיטה שנעבור איתך, שכבה אחר שכבה.</p>
     </div>
 
-    <div class="circles" aria-hidden="true">
-      <div class="ring ring-a"><span class="ring-tag">IA</span></div>
-      <div class="ring ring-p"><span class="ring-tag">IP</span></div>
-      <div class="ring ring-g"><span>Gravity</span></div>
-      <div class="orbit orbit-a"><span class="od"></span></div>
-      <div class="orbit orbit-p"><span class="od"></span></div>
-    </div>
+    <p class="method-title-code" dir="ltr">IG → IP → IA</p>
+    <div class="method-figure"><svg viewBox="0 0 480 480" role="img" aria-labelledby="method-field-title">
+    <title id="method-field-title">סמכות שנבנית מבפנים החוצה ומושכת הזדמנויות</title>
+    <g fill="none" class="field-rule" stroke-width="1"><circle cx="240" cy="230" r="72"/><circle cx="240" cy="230" r="139"/><circle cx="240" cy="230" r="204"/></g>
+    <g class="field-dot"><circle cx="98" cy="84" r="7"/><circle cx="397" cy="100" r="5"/><circle cx="444" cy="230" r="6"/><circle cx="125" cy="308" r="5"/><circle cx="345" cy="322" r="7"/><circle cx="230" cy="434" r="5"/><circle cx="307" cy="204" r="5"/><circle cx="44" cy="287" r="4"/></g>
+    <g class="field-rule" stroke-width="1" stroke-dasharray="3 5"><path d="M125 115L194 184M391 230H306M240 389V296"/></g>
+    <g fill="none" class="field-rule" stroke-width="1"><path d="M183 183l11 1-1-11M316 223l-10 7 10 7M233 306l7-10 7 10"/></g>
+    <circle class="field-focus" cx="240" cy="230" r="24"/>
+    <g class="field-type" text-anchor="middle"><text x="240" y="24">Intellectual Authority</text><text x="240" y="81">Intellectual Property</text><text x="240" y="148">Intellectual Gravity</text></g>
+  </svg></div>
     <p class="method-note">בליבה נמצא ה־<strong>Gravity</strong> שלך. <strong>IP</strong> הוא הקניין האינטלקטואלי שלך (Intellectual Property). <strong>IA</strong> היא הסמכות האינטלקטואלית שלך (Intellectual Authority). כשנעלה לשיחה, נסביר בדיוק איך השיטה עובדת.</p>
 
     <div class="layers">
@@ -709,17 +730,17 @@
   </div>
   <div class="egrid">
     <div class="ec fade">
-      <div class="ec-ico">🤝</div>
+      <div class="ec-ico" aria-hidden="true"><svg viewBox="0 0 70 70"><circle cx="35" cy="35" r="22" fill="none" stroke="var(--border)"/><circle cx="35" cy="35" r="7" fill="var(--gravity-red)"/><circle cx="57" cy="35" r="4" fill="var(--t1)"/></svg></div>
       <h3>אחד-על-אחד</h3>
       <p>שיתוף פעולה עמוק ומותאם אישית. ליווי צמוד בכל שלב — מחשיפת הרעיונות שלך ועד בניית הנכסים והסמכות סביבם.</p>
     </div>
     <div class="ec feat fade">
-      <div class="ec-ico">🌐</div>
+      <div class="ec-ico" aria-hidden="true"><svg viewBox="0 0 70 70"><circle cx="35" cy="35" r="22" fill="none" stroke="var(--border)"/><circle cx="35" cy="35" r="6" fill="var(--gravity-red)"/><g fill="var(--t1)"><circle cx="35" cy="13" r="4"/><circle cx="54" cy="46" r="4"/><circle cx="16" cy="46" r="4"/></g></svg></div>
       <h3>מחזורים</h3>
       <p>לצמוח לצד מייסדים שאפתנים אחרים בקבוצות קטנות שנבנו למחויבות, מומנטום ותובנות משותפות.</p>
     </div>
     <div class="ec fade">
-      <div class="ec-ico">📖</div>
+      <div class="ec-ico" aria-hidden="true"><svg viewBox="0 0 70 70"><path d="M14 16h18l3 5 3-5h18v37H38l-3 4-3-4H14zM35 21v36" fill="none" stroke="var(--t1)" stroke-width="1.3"/><circle cx="35" cy="36" r="6" fill="var(--gravity-red)"/></svg></div>
       <h3>נכסי עומק</h3>
       <p>ספרים, מסגרות, הרצאות מפתח, ניוזלטרים — פרויקטים לבניית סמכות שנבנו כדי להצטבר לאורך שנים.</p>
     </div>

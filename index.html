@@ -31,7 +31,6 @@
   <link rel="icon" type="image/svg+xml" href="assets/Gravity ICON - dark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #F5F0ED;
@@ -458,6 +457,7 @@
     @media(max-width:768px){
       .hdr{top:8px;width:calc(100% - 20px);padding:0 14px;height:54px;border-radius:14px}
       .hdr-nav{display:none}
+      .hdr-login{display:none}
       .hamburger{display:flex}
       .hero{padding:100px 20px 60px}
       .hero h1{font-size:38px;letter-spacing:-.5px}
@@ -472,8 +472,10 @@
       .fbot{flex-direction:column;align-items:flex-start}
     }
   </style>
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/site.css">
 </head>
-<body>
+<body class="gravity-home">
 <a href="#main" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
@@ -502,6 +504,7 @@
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="var(--acc)"/>
       </svg>
     </button>
+    <a href="https://app.growgravity.com/sign-in" class="btn btn-ghost btn-sm hdr-login">Client Login</a>
     <a href="#contact" class="btn btn-primary btn-sm">
       Book a Strategy Call <span class="arr">&#8599;</span>
     </a>
@@ -519,12 +522,14 @@
   <a href="#engagements" onclick="closeMobMenu()">Work With Us</a>
   <a href="#faq" onclick="closeMobMenu()">FAQ</a>
   <a href="#contact" onclick="closeMobMenu()" style="margin-top:16px;color:var(--acc)">Book a Strategy Call ↗</a>
+  <a href="https://app.growgravity.com/sign-in" style="color:var(--t2)">Client Login</a>
   <button class="mob-theme" onclick="toggleTheme()">Appearance<span style="color:var(--acc);font-weight:700">Light / Dark</span></button>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="main">
   <div class="hero-in">
+    <div class="hero-copy">
     <div class="eyebrow"><span class="dot"></span>Founder-Led Growth</div>
     <h1>Your company's hardest-to-copy advantage is <em>you</em>.</h1>
     <p class="hero-sub">Most companies compete on features, service, and price. The founders who pull ahead compete on something no competitor can replicate: themselves.</p>
@@ -537,6 +542,19 @@
     </div>
     <p class="hero-note">45 minutes. About your ideas and what's possible — no pitch deck.</p>
     <p class="hero-trust">For founders who want more than attention. Attention fades. Authority compounds.</p>
+    </div>
+<figure class="gravity-field" aria-label="Authority builds from the inside out and attracts opportunities">
+  <svg viewBox="0 0 480 480" role="img" aria-labelledby="field-title">
+    <title id="field-title">Authority builds from the inside out and attracts opportunities</title>
+    <g fill="none" class="field-rule" stroke-width="1"><circle cx="240" cy="230" r="72"/><circle cx="240" cy="230" r="139"/><circle cx="240" cy="230" r="204"/></g>
+    <g class="field-dot"><circle cx="98" cy="84" r="7"/><circle cx="397" cy="100" r="5"/><circle cx="444" cy="230" r="6"/><circle cx="125" cy="308" r="5"/><circle cx="345" cy="322" r="7"/><circle cx="230" cy="434" r="5"/><circle cx="307" cy="204" r="5"/><circle cx="44" cy="287" r="4"/></g>
+    <g class="field-rule" stroke-width="1" stroke-dasharray="3 5"><path d="M125 115L194 184M391 230H306M240 389V296"/></g>
+    <g fill="none" class="field-rule" stroke-width="1"><path d="M183 183l11 1-1-11M316 223l-10 7 10 7M233 306l7-10 7 10"/></g>
+    <circle class="field-focus" cx="240" cy="230" r="24"/>
+    <g class="field-type" text-anchor="middle"><text x="240" y="24">Intellectual Authority</text><text x="240" y="81">Intellectual Property</text><text x="240" y="148">Intellectual Gravity</text></g>
+  </svg>
+  <figcaption class="field-caption"><span>01 / GRAVITY</span><strong>Become the point of attraction.</strong></figcaption>
+</figure>
   </div>
 </section>
 
@@ -558,13 +576,16 @@
       <p style="margin-top:16px">Authority isn't louder content. It's a foundation built in order — from the inside out. It's also the method we'll walk you through, layer by layer.</p>
     </div>
 
-    <div class="circles" aria-hidden="true">
-      <div class="ring ring-a"><span class="ring-tag">IA</span></div>
-      <div class="ring ring-p"><span class="ring-tag">IP</span></div>
-      <div class="ring ring-g"><span>Gravity</span></div>
-      <div class="orbit orbit-a"><span class="od"></span></div>
-      <div class="orbit orbit-p"><span class="od"></span></div>
-    </div>
+    <p class="method-title-code" dir="ltr">IG → IP → IA</p>
+    <div class="method-figure"><svg viewBox="0 0 480 480" role="img" aria-labelledby="method-field-title">
+    <title id="method-field-title">Authority builds from the inside out and attracts opportunities</title>
+    <g fill="none" class="field-rule" stroke-width="1"><circle cx="240" cy="230" r="72"/><circle cx="240" cy="230" r="139"/><circle cx="240" cy="230" r="204"/></g>
+    <g class="field-dot"><circle cx="98" cy="84" r="7"/><circle cx="397" cy="100" r="5"/><circle cx="444" cy="230" r="6"/><circle cx="125" cy="308" r="5"/><circle cx="345" cy="322" r="7"/><circle cx="230" cy="434" r="5"/><circle cx="307" cy="204" r="5"/><circle cx="44" cy="287" r="4"/></g>
+    <g class="field-rule" stroke-width="1" stroke-dasharray="3 5"><path d="M125 115L194 184M391 230H306M240 389V296"/></g>
+    <g fill="none" class="field-rule" stroke-width="1"><path d="M183 183l11 1-1-11M316 223l-10 7 10 7M233 306l7-10 7 10"/></g>
+    <circle class="field-focus" cx="240" cy="230" r="24"/>
+    <g class="field-type" text-anchor="middle"><text x="240" y="24">Intellectual Authority</text><text x="240" y="81">Intellectual Property</text><text x="240" y="148">Intellectual Gravity</text></g>
+  </svg></div>
     <p class="method-note">At the core is your <strong>Gravity</strong>. <strong>IP</strong> is your Intellectual Property. <strong>IA</strong> is your Intellectual Authority. Once we're on a call, we'll walk you through exactly how the method works.</p>
 
     <div class="layers">
@@ -708,17 +729,17 @@
   </div>
   <div class="egrid">
     <div class="ec fade">
-      <div class="ec-ico">🤝</div>
+      <div class="ec-ico" aria-hidden="true"><svg viewBox="0 0 70 70"><circle cx="35" cy="35" r="22" fill="none" stroke="var(--border)"/><circle cx="35" cy="35" r="7" fill="var(--gravity-red)"/><circle cx="57" cy="35" r="4" fill="var(--t1)"/></svg></div>
       <h3>One-on-One</h3>
       <p>Personalized, deep collaboration. Hands-on support at every step — from uncovering your ideas to building the assets and authority around them.</p>
     </div>
     <div class="ec feat fade">
-      <div class="ec-ico">🌐</div>
+      <div class="ec-ico" aria-hidden="true"><svg viewBox="0 0 70 70"><circle cx="35" cy="35" r="22" fill="none" stroke="var(--border)"/><circle cx="35" cy="35" r="6" fill="var(--gravity-red)"/><g fill="var(--t1)"><circle cx="35" cy="13" r="4"/><circle cx="54" cy="46" r="4"/><circle cx="16" cy="46" r="4"/></g></svg></div>
       <h3>Cohorts</h3>
       <p>Grow alongside other ambitious founders in small groups built for accountability, momentum, and shared insight.</p>
     </div>
     <div class="ec fade">
-      <div class="ec-ico">📖</div>
+      <div class="ec-ico" aria-hidden="true"><svg viewBox="0 0 70 70"><path d="M14 16h18l3 5 3-5h18v37H38l-3 4-3-4H14zM35 21v36" fill="none" stroke="var(--t1)" stroke-width="1.3"/><circle cx="35" cy="36" r="6" fill="var(--gravity-red)"/></svg></div>
       <h3>Deep Assets</h3>
       <p>Books, frameworks, keynotes, newsletters — authority-building projects designed to compound for years.</p>
     </div>
