@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gravity — סמכות שמצטברת, למייסדים-מנכ"לים</title>
+  <link rel="canonical" href="https://growgravity.com/he">
   <link rel="alternate" hreflang="en" href="https://growgravity.com/">
   <link rel="alternate" hreflang="he" href="https://growgravity.com/he">
   <link rel="alternate" hreflang="x-default" href="https://growgravity.com/">
@@ -12,13 +13,21 @@
   <meta property="og:description" content="המייסדים שבולטים לא מתחרים על פיצ'רים או מחיר. הם מתחרים על עצמם. Gravity עוזרת לך להפוך ניסיון, רעיונות ותפיסות לסמכות שמצטברת.">
   <meta property="og:url" content="https://growgravity.com/he">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://growgravity.com/assets/gravity lite with text.png">
+  <meta property="og:image" content="https://growgravity.com/assets/og-gravity-he.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gravity: היתרון הכי קשה להעתקה בחברה שלך הוא אתה.">
+  <meta property="og:site_name" content="Gravity">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://growgravity.com/assets/og-gravity-he.png">
   <meta name="twitter:title" content="הכוח שמאחורי הצמיחה של החברה שלך — זה אתה">
   <meta name="twitter:description" content="חברת ייעוץ פרימיום שעוזרת למייסדים-מנכ"לים לבנות סמכות שמצטברת.">
   <link rel="icon" type="image/svg+xml" href="/assets/Gravity ICON - dark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Heebo:wght@400;500;600;700;800;900&display=swap">
   <style>
     :root {
       --bg: #F5F0ED;
@@ -475,6 +484,7 @@
   </style>
   <link rel="stylesheet" href="/design-system/tokens.css">
   <link rel="stylesheet" href="/design-system/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Gravity", "url": "https://growgravity.com/", "logo": "https://growgravity.com/assets/gravity-logo-dark.png", "description": "Gravity היא חברת ייעוץ פרימיום שעוזרת למייסדים-מנכ\"לים להפוך את מי שהם, את מה שהם יודעים ואת מה שהם מאמינים בו לסמכות שמושכת הזדמנויות ומצטברת לאורך זמן.", "inLanguage": "he", "founder": [{"@type": "Person", "name": "Gal Agadi", "sameAs": "https://www.linkedin.com/in/galagadi/"}, {"@type": "Person", "name": "Sagi Shrieber", "sameAs": "https://www.linkedin.com/in/sagishrieber"}]}</script>
 </head>
 <body class="gravity-home">
 <a href="#main" class="skip-link">דלג לתוכן</a>
@@ -759,7 +769,7 @@
   </div>
   <div class="tgrid">
     <div class="tcard fade">
-      <div class="tav"><img src="/assets/gal profile image lite.png" alt="Gal Agadi"></div>
+      <div class="tav"><img src="/assets/gal-agadi-240.webp" alt="Gal Agadi" width="240" height="240" loading="lazy" decoding="async"></div>
       <h3>Gal Agadi</h3>
       <p class="role">מייסד ומנכ"ל</p>
       <p class="bio">אסטרטג מותג אישי וארכיטקט תוכן שמאחורי המתודולוגיה של Gravity. גל עוזר למייסדים לחשוף את הרעיונות, הסיפור והתפיסות שהופכים אותם לבלתי ניתנים להעתקה — ולהפוך אותם לסמכות.</p>
@@ -769,7 +779,7 @@
       </a>
     </div>
     <div class="tcard fade">
-      <div class="tav"><img src="/assets/sagi profile pic.png" alt="Sagi Shrieber"></div>
+      <div class="tav"><img src="/assets/sagi-shrieber-240.webp" alt="Sagi Shrieber" width="240" height="240" loading="lazy" decoding="async"></div>
       <h3>Sagi Shrieber</h3>
       <p class="role">מייסד-שותף ושותף</p>
       <p class="bio">חושב מערכות, משקיע ואסטרטג סקיילינג. שגיא בונה את התשתית והעמוד התפעולי שמאפשרים ל-Gravity לספק תוצאות ברמה עולמית בקנה מידה.</p>
@@ -944,7 +954,17 @@
   // Newsletter signup is handled by the embedded Substack form (growgravityil.substack.com).
   // Substack records consent + sends the double opt-in confirmation and manages unsubscribe.
 </script>
-<script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+<script>
+  // Load the TidyCal booking calendar (about 1.6 MB) only when the visitor nears the booking section.
+  (function(){
+    var box=document.getElementById('tidycal-embed'),done=false;
+    function load(){if(done)return;done=true;var s=document.createElement('script');s.src='https://asset-tidycal.b-cdn.net/js/embed.js';s.async=true;document.body.appendChild(s);}
+    if(!box||!('IntersectionObserver' in window)){load();return;}
+    new IntersectionObserver(function(es,o){if(es.some(function(e){return e.isIntersecting})){o.disconnect();load();}},{rootMargin:'800px 0px'}).observe(box);
+    if(location.hash==='#contact')load();
+    window.addEventListener('hashchange',function(){if(location.hash==='#contact')load();});
+  })();
+</script>
 <script src="/compliance.js" defer></script>
 </body>
 </html>

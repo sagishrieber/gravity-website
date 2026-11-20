@@ -64,3 +64,5 @@ body{background:var(--bg);color:var(--t1)}
 .method-figure{width:min(410px,84vw);margin:24px auto}.method-figure svg{width:100%;height:auto;display:block}
 section[id]{scroll-margin-top:100px}
 .nl-input,.mob-theme,.wfield input,.wfield select,.wstmt .wstmt-body{font-family:var(--font-body)}
+/* Phone tap targets: menu button, language switch and footer links reach ~44px (WCAG 2.5.5 / Apple HIG). */
+@media(max-width:850px){.hamburger{min-width:44px;min-height:44px;align-items:center;justify-content:center;padding:10px}.lang-opt{min-width:36px;min-height:36px;display:inline-flex;align-items:center;justify-content:center}.fcol ul{gap:2px}.fcol a{display:inline-flex;align-items:center;min-height:40px}.fcopy{line-height:2.6}.fcopy-link{display:inline-block;padding:6px 0}}
